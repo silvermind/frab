@@ -2,10 +2,8 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.2.5'
 
-gem 'sqlite3'
-gem 'pg'
 gem 'mysql2'
-
+gem 'ruby-rc4'
 gem 'bcrypt-ruby'
 gem 'haml'
 gem 'acts_as_commentable'
