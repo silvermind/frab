@@ -1,0 +1,32 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  host: localhost
+  database: frab_dev
+  pool: 25
+  username: frab_dev
+  password: Rooqu0uqu2wo
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  host: localhost
+  database: frab_prod
+  pool: 25
+  username: frab_prod
+  password: queex5uruTon
+
+test: &test
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  host: localhost
+  database: frab_test
+  pool: 25
+  username: frab_test
+  password: iquae3Ohyooh
+
+cucumber:
+  <<: *test

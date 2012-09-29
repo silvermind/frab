@@ -6,7 +6,7 @@ set :user, "#{application}"
 set :port, 2222
 set :use_sudo, false
 set :scm, :git
-set :repository, "ssh://git@github.com:ohm2013/frab.git"
+set :repository, "ssh://git@github.com/ohm2013/frab.git"
 set :keep_releases, 5
 set :deploy_via, :remote_cache
 

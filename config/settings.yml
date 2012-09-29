@@ -1,0 +1,24 @@
+development:
+  # Host configuration used to generate links in emails
+  host: localhost
+  port: 3000
+  protocol: http
+  # Default 'From' address, used when sending emails
+  from_email: frab_dev@localhost
+
+test:
+  host: frab.test
+  protocol: http
+  from_email: frab_test@localhost
+
+production:
+  # no need to specify port, when default (80) is used
+  host: frab.ifcat.org
+  protocol: https
+  from_email: no-reply@frab.ifcat.org
+  # smtp server settings. see
+  # http://api.rubyonrails.org/classes/ActionMailer/Base.html
+  # for all available options
+  smtp_settings:
+    address: localhost
+
