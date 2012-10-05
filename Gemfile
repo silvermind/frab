@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.5'
+gem 'rails' #, '3.2.5' try latest
 
 gem 'mysql2'
 gem 'ruby-rc4'
@@ -49,5 +49,6 @@ end
 group :assets do
   gem 'sass-rails', " ~> 3.2.0"  
   gem 'coffee-rails', " ~> 3.2.0"
-  gem 'uglifier'  
+  gem 'uglifier'
+  gem 'jquery-ui-rails'
 end 

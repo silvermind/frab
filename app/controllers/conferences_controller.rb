@@ -78,4 +78,12 @@ class ConferencesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+	def edit_tracks
+		puts 'tracks'
+	end
+
+	def edit_rooms
+		puts 'rooms'
+	end
 end

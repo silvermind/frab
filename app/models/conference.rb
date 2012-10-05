@@ -9,6 +9,7 @@ class Conference < ActiveRecord::Base
   accepts_nested_attributes_for :rooms, :reject_if => proc {|r| r["name"].blank?}, :allow_destroy => true
   accepts_nested_attributes_for :tracks, :reject_if => :all_blank, :allow_destroy => true
   accepts_nested_attributes_for :languages, :reject_if => :all_blank, :allow_destroy => true
+
   validates_presence_of :title, 
     :acronym, 
     :first_day, 
@@ -28,7 +29,7 @@ class Conference < ActiveRecord::Base
 
   after_update :update_timeslots
 
-  has_paper_trail 
+  has_paper_trail
 
   def self.current
     self.order("created_at DESC").first
