@@ -21,4 +21,5 @@ production:
   # for all available options
   smtp_settings:
     address: localhost
+    enable_starttls_auto: false
 
