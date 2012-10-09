@@ -20,5 +20,5 @@ production:
   # http://api.rubyonrails.org/classes/ActionMailer/Base.html
   # for all available options
   smtp_settings:
-    address: mail.ifcat.org
+    address: localhost
 
