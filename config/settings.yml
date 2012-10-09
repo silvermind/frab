@@ -15,10 +15,10 @@ production:
   # no need to specify port, when default (80) is used
   host: frab.ifcat.org
   protocol: https
-  from_email: no-reply@frab.ifcat.org
+  from_email: no-reply@ifcat.org
   # smtp server settings. see
   # http://api.rubyonrails.org/classes/ActionMailer/Base.html
   # for all available options
   smtp_settings:
-    address: localhost
+    address: mail.ifcat.org
 
