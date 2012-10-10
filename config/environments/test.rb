@@ -42,6 +42,8 @@ Frab::Application.configure do
   # Allow pass debug_assets=true as a query parameter to load pages with unpackaged assets
   config.assets.allow_debugging = true
 
+  Paperclip.options[:command_path] = "/usr/local/bin"
+
   config.after_initialize do
     PaperTrail.enabled = false
   end

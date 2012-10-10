@@ -60,6 +60,8 @@ Frab::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+  Paperclip.options[:command_path] = "/usr/bin"
 end
 
 # Don't show trace pages in production! Requests shall never originate from localhost!
