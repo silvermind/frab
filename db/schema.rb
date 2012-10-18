@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120523130743) do
+ActiveRecord::Schema.define(:version => 20121018184014) do
 
   create_table "availabilities", :force => true do |t|
     t.integer  "person_id"
@@ -104,17 +104,17 @@ ActiveRecord::Schema.define(:version => 20120523130743) do
   end
 
   create_table "events", :force => true do |t|
-    t.integer  "conference_id",                             :null => false
-    t.string   "title",                                     :null => false
+    t.integer  "conference_id",                                   :null => false
+    t.string   "title",                                           :null => false
     t.string   "subtitle"
-    t.string   "event_type",            :default => "talk"
+    t.string   "event_type",                  :default => "talk"
     t.integer  "time_slots"
-    t.string   "state",                 :default => "new",  :null => false
+    t.string   "state",                       :default => "new",  :null => false
     t.string   "language"
     t.datetime "start_time"
     t.text     "abstract"
     t.text     "description"
-    t.boolean  "public",                :default => true
+    t.boolean  "public",                      :default => true
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
@@ -124,11 +124,19 @@ ActiveRecord::Schema.define(:version => 20120523130743) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.float    "average_rating"
-    t.integer  "event_ratings_count",   :default => 0
+    t.integer  "event_ratings_count",         :default => 0
     t.text     "note"
     t.text     "submission_note"
-    t.integer  "event_feedbacks_count", :default => 0
+    t.integer  "event_feedbacks_count",       :default => 0
     t.float    "average_feedback"
+    t.string   "submission_format"
+    t.integer  "submission_length"
+    t.integer  "max_number_participants"
+    t.string   "off_the_record"
+    t.text     "supporting_materials"
+    t.text     "specific_conditions_to_meet"
+    t.string   "submission_level"
+    t.string   "target_audience"
   end
 
   create_table "im_accounts", :force => true do |t|
@@ -165,10 +173,10 @@ ActiveRecord::Schema.define(:version => 20120523130743) do
   end
 
   create_table "people", :force => true do |t|
-    t.string   "first_name",          :null => false
-    t.string   "last_name",           :null => false
+    t.string   "first_name",            :null => false
+    t.string   "last_name",             :null => false
     t.string   "public_name"
-    t.string   "email",               :null => false
+    t.string   "email",                 :null => false
     t.boolean  "email_public"
     t.string   "gender"
     t.string   "avatar_file_name"
@@ -181,6 +189,8 @@ ActiveRecord::Schema.define(:version => 20120523130743) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.text     "note"
+    t.text     "bio"
+    t.text     "previous_performances"
   end
 
   create_table "phone_numbers", :force => true do |t|

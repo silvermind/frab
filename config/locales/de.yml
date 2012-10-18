@@ -11,9 +11,13 @@ de:
   options:
     lecture: "Vortrag"
     workshop: "Workshop"
+    demonstration: "Vorführung"
+    film_screening: "Film screening"
     podium: "Podiumsdiskussion"
     lightning_talk: "Lightning Talk"
     meeting: "Meeting"
+    art_performance: "art performance"
+    art_installation: "art installation"
     other: "Andere"
     male: "männlich"
     female: "weiblich"
@@ -24,7 +28,16 @@ de:
     business: "Geschäftlich"
     skype: "Skype"
     secretary: "Sekretärin/Vorzimmer"
-
+    no: "Nein"
+    yes: "Ja"
+    anonymous: "Anonym"
+    beginner: "Anfanger"
+    intermediate: "Normal"
+    advanced: "Experte"
+    adults_17_plus: "Volwachsenen (17+)"
+    youngsters_12_16: "Jungmenchen (12-16)"
+    children_7_11: "Kinder (7-11)"
+    young_children_4_6: "junge Kinder (4-6)"
   date:
     formats:
       default: "%d.%m.%Y"

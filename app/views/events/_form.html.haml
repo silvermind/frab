@@ -16,6 +16,12 @@
   = f.inputs :name => "Detailed description" do
     = f.input :abstract, :input_html => {:rows => 4}, :hint => "One short paragraph that succinctly describes the event."
     = f.input :description,:input_html => {:rows => 4}, :hint => "A longer description of the event. Use this to give additional details that did not fit in the abstract. Both, abstract and description, will be shown on the conference website."
+    = f.input :max_number_participants, :hint => "The maximum number of participants"
+    = f.input :off_the_record, :as => :select, :collection => Event::OFF_THE_RECORD_NAMES
+    = f.input :supporting_materials, :input_html => {:rows => 4}, :hint => "Any materials necessary to hold event"
+    = f.input :specific_conditions_to_meet, :input_html => {:rows => 4}, :hint => "Specific conditions to be met in order to hold the event"
+    = f.input :submission_level, :as => :select, :collection => Event::SUBMISSION_LEVELS
+    = f.input :target_audience, :as => :select, :collection => Event::TARGET_AUDIENCES
   = f.inputs :name => "Notes" do
     = f.input :note, :input_html => {:rows => 2}, :hint => "visibility: admin only."
     = f.input :submission_note, :input_html => {:rows => 2}, :hint => "visibiliy: admin and user; additional information."

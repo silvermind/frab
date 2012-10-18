@@ -62,8 +62,16 @@
           %br/
     .span10
       %p
+        %b Biography:
+        = simple_format @person.bio
+    .span10
+      %p
         %b Description:
         = simple_format @person.description
+    .span10
+      %p
+        %b Previous performances:
+        = simple_format @person.previous_performances
     .span10
       %p
         %b Notes(admin):

@@ -1,7 +1,10 @@
 class Event < ActiveRecord::Base
   include ActiveRecord::Transitions
 
-  TYPES = [:lecture, :workshop, :podium, :lightning_talk, :meeting, :other]
+  TYPES = [:lecture, :workshop, :demonstration, :film_screening, :podium, :lightning_talk, :meeting, :art_performance, :art_installation, :other]
+  OFF_THE_RECORD_NAMES  = [:no, :yes, :anonymous]
+  SUBMISSION_LEVELS = [:beginner, :intermediate, :advanced]
+  TARGET_AUDIENCES = [:adults_17_plus, :youngsters_12_16, :children_7_11, :young_children_4_6]
 
   has_many :event_people, :dependent => :destroy
   has_many :event_feedbacks, :dependent => :destroy
