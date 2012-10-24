@@ -3,4 +3,12 @@
     %h1 Welcome
   .row
     .span16
-      Welcome to OHM2013. Please login to proceed!
+      %p Welcome to FRAB. We are using this to support our conferences.
+      %p If you want to react to a call for papers please click on one of the following links:
+      - @conferences.each do |conference|
+        - if conference.call_for_papers
+          %p
+          = conference.title
+          = link_to t("call for papers", :default => "Call for Papers"), new_cfp_session_path
+      %p &nbsp;
+      %p Thank you

@@ -25,6 +25,7 @@ class ApplicationController < ActionController::Base
       @conference = Conference.current
     end
     Time.zone = @conference.timezone if @conference
+    @conferences = Conference.all
   end
 
   def info_for_paper_trail
