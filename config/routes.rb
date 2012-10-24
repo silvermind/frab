@@ -109,9 +109,9 @@ Frab::Application.routes.draw do
     end
 
     match "/:conference_acronym" => "home#index", :as => "conference_home"
-    root :to => "home#index"
+    root :to => "welcome#index"
   end
 
-  root :to => "home#index"
+  root :to => "welcome#index"
 
 end
