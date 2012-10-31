@@ -6,7 +6,7 @@ development:
   database: frab_dev
   pool: 25
   username: frab_dev
-  password: Rooqu0uqu2wo
+  password: kuchkuch
 
 production:
   adapter: mysql2
@@ -16,7 +16,7 @@ production:
   database: frab_prod
   pool: 25
   username: frab_prod
-  password: queex5uruTon
+  password: rochelrochel
 
 test: &test
   adapter: mysql2
@@ -26,7 +26,7 @@ test: &test
   database: frab_test
   pool: 25
   username: frab_test
-  password: iquae3Ohyooh
+  password: hoesthoest
 
 cucumber:
   <<: *test
