@@ -32,12 +32,12 @@ gem 'prawn_rails'
 
 group :development, :test do
   gem 'ruby-debug', :platforms => :mri_18
-  gem 'ruby-debug19', :platforms => :mri_19
+  gem 'ruby-debug19', :platforms => :mri_19 
+  gem 'factory_girl_rails'
 end
 
 group :test do
   gem 'minitest'
-  gem 'factory_girl_rails'
   gem 'turn', :require => false
 end
 
