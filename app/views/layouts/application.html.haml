@@ -2,7 +2,7 @@
 %html
   %head
     %title
-      - if @conference.title
+      - if @conference
         = @conference.title
       - else
         frab
@@ -26,9 +26,9 @@
                 %li= link_to t("events", :default => "Events"), events_path
                 %li
                   - if @conference.call_for_papers
-                    = link_to t("call for papers", :default => "Call for Papers"), call_for_papers_path
+                    = link_to t("call for participation", :default => "Call for Participation"), call_for_papers_path
                   - else
-                    = link_to t("call for papers", :default => "Launch Call for Papers"), new_call_for_papers_path
+                    = link_to t("call for participation", :default => "Launch Call for Participation"), new_call_for_papers_path
                 %li= link_to t("schedule", :default => "Schedule"), schedule_path
                 %li= link_to t("settings", :default => "Settings"), edit_conference_path
             %ul.nav.secondary-nav.pull-right

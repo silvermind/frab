@@ -16,7 +16,7 @@ class CallForPapersController < ApplicationController
     @call_for_papers.conference = @conference
     
     if @call_for_papers.save
-      redirect_to call_for_papers_path, :notice => "Launched Call for Papers."
+      redirect_to call_for_papers_path, :notice => "Launched Call for Participation."
     else
       render :action => "new"
     end
