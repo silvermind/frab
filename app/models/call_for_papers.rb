@@ -7,7 +7,7 @@ class CallForPapers < ActiveRecord::Base
   has_paper_trail
 
   def to_s
-    "Call for Papers: #{self.conference.title}"
+    "Call for Participation: #{self.conference.title}"
   end
 
 end
