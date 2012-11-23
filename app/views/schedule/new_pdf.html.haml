@@ -5,7 +5,7 @@
     .span16
       = form_tag schedule_custom_pdf_path do
         .clearfix
-          = label_tag "page_size", "Select paper format:"
+          = label_tag "page_size", "Select participation format:"
           .input
             = select_tag "page_size", options_for_select(Prawn::Document::PageGeometry::SIZES.keys.sort)
         .clearfix
