@@ -59,5 +59,5 @@ en:
         state: "State"
   mailers:
     user_mailer:
-      confirmation_instructions: "Account Activation"
+      confirmation_instructions: "[OHM2013] Your account activation for FRAB"
       password_reset_instructions: "Reset Password"
