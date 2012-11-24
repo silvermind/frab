@@ -61,7 +61,7 @@ de:
     phone_numbers: "Telefonnummern"
     im_accounts: "Instant Messaging Accounts"
     bio: "Beschreibung Ihrer Person"
-    abstract_hint: "Ein kurzer, prägnanter Absatz zu Ihrer Person"
+    abstract_hint: "Ein kurzer, prägnanter Absatz zu Ihrer Person, beispielsweise Erfahrung als Sprecher, Qualifikationen, heutige Position, Kentnisse. Als Alternative kann ein Link nach ein Online ressource gegeben werden."
     description_hint: "Eine längere Beschreibung Ihrer Person. Für alles, was nicht in den Abstract passt."
     links: "Links"
     languages_spoken: "Gesprochene Sprachen"
