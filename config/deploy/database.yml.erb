@@ -6,7 +6,7 @@ development:
   database: frab_dev
   pool: 25
   username: frab_dev
-  password: kuchkuch
+  password: xxxxxxxxxxxx
 
 production:
   adapter: mysql2
@@ -16,7 +16,7 @@ production:
   database: frab_prod
   pool: 25
   username: frab_prod
-  password: rochelrochel
+  password: #{Capistrano::CLI.ui.ask("Enter MySQL database password: ")}
 
 test: &test
   adapter: mysql2
@@ -26,7 +26,7 @@ test: &test
   database: frab_test
   pool: 25
   username: frab_test
-  password: hoesthoest
+  password: xxxxxxxxxxxx
 
 cucumber:
   <<: *test
