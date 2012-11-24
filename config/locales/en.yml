@@ -57,6 +57,8 @@ en:
       event:
         title: "Title"
         state: "State"
+        time_slots: "Duration"
+
   mailers:
     user_mailer:
       confirmation_instructions: "[OHM2013] Your account activation for FRAB"
