@@ -1,5 +1,15 @@
-Welcome <%= @user.email %>!
+Hi <%= @user.email %>,
 
-You can confirm your account through the link below:
+You've signed up with the OHM2013 Call for Participation system: FRAB, at https://cfp.ohm2013.org.
+
+We're almost ready to welcome you to the system! Please confirm your account through the link below:
 
 <%= cfp_user_confirmation_url(:locale => I18n.locale, :confirmation_token => @user.confirmation_token, :conference_acronym => @user.call_for_papers.conference.acronym) %>
+
+You will be able to submit your content right away. Just click on the "Add new event"-button to get going.
+
+Thanks for your submission(s) and we hope to see you at OHM2013!
+
+Best regards,
+
+Team:Content
