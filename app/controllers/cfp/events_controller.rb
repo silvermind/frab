@@ -46,7 +46,7 @@ class Cfp::EventsController < ApplicationController
   # POST /cfp/events
   # POST /cfp/events.xml
   def create
-    @event = Event.new(params[:event])
+    @event = Event.new(params[:event], :as => current_user.role.to_sym)
     @event.conference = @conference
     @event.event_people << EventPerson.new(:person => current_user.person, :event_role => "submitter")
     @event.event_people << EventPerson.new(:person => current_user.person, :event_role => "speaker")
@@ -68,7 +68,7 @@ class Cfp::EventsController < ApplicationController
     @event = current_user.person.events.find(params[:id], :readonly => false)
 
     respond_to do |format|
-      if @event.update_attributes(params[:event])
+      if @event.update_attributes(params[:event], :as => current_user.role.to_sym)
         format.html { redirect_to(cfp_person_path, :notice => t("cfp.event_updated_notice")) }
         format.xml  { head :ok }
       else

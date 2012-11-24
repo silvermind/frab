@@ -6,6 +6,8 @@ class Event < ActiveRecord::Base
   SUBMISSION_LEVELS = [:beginner, :intermediate, :advanced]
   TARGET_AUDIENCES = [:adults_17_plus, :youngsters_12_16, :children_7_11, :young_children_4_6]
 
+  attr_protected :track_id, :as => :submitter
+
   has_many :event_people, :dependent => :destroy
   has_many :event_feedbacks, :dependent => :destroy
   has_many :people, :through => :event_people
