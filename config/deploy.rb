@@ -49,6 +49,6 @@ end
 
 require "rvm/capistrano"
 require "bundler/capistrano"
-require "frab/frab/capistrano_database_yml"
+require "./lib/frab/capistrano_database_yml"
 
 load 'deploy/assets'
