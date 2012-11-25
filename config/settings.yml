@@ -13,7 +13,7 @@ test:
 
 production:
   # no need to specify port, when default (80) is used
-  host: frab.ifcat.org
+  host: cfp.ohm2013.org
   protocol: https
   from_email: no-reply@ifcat.org
   # smtp server settings. see
