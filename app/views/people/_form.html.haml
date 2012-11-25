@@ -12,7 +12,7 @@
     = dynamic_association :phone_numbers, "Phone numbers", f
     = dynamic_association :im_accounts, "Instant messaging accounts", f
   = f.inputs :name => "Bio" do
-    = f.input :abstract, :input_html => {:rows => 4, :class => "span6"}, :hint => "One short paragraph that succinctly describes this person."
+    = f.input :abstract, :input_html => {:rows => 4, :class => "span6"}, :hint => "One short paragraph that describes this person. E.g. speaking experience, qualifications, current position, skills. Or supply a link to an online-bio page."
     = f.input :description, :input_html => {:class => "span6"}, :hint => "A longer description of this person. Use this to give additional details that did not fit in the abstract."
     = f.input :previous_performances, :input_html => {:class => "span6"}, :hint => "Description of and links to previous performances if applicable."
     = f.input :note, :hint => "visibility: admin only."
