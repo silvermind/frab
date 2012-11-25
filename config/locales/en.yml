@@ -58,6 +58,8 @@ en:
         title: "Title"
         state: "State"
         time_slots: "Duration"
+      person:
+        acq_in_orga: "Acquantances in organisation"
 
   mailers:
     user_mailer:

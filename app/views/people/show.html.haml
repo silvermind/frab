@@ -70,6 +70,10 @@
         = simple_format @person.previous_performances
     .span10
       %p
+        %b Acquantances in organisation:
+        = simple_format @person.acq_in_orga
+    .span10
+      %p
         %b Notes(admin):
         = simple_format @person.note
 %section

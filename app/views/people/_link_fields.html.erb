@@ -1,7 +1,7 @@
 <div class="nested-fields">
   <%= f.inputs do %>
-    <%= f.input :title %>
-    <%= f.input :url %>
+    <%= f.input :title, :input_html => {:class => "span12"}, :hint => "Description of link for example a previous public performance" %>
+    <%= f.input :url, :input_html => {:class => "span12"}, :hint => "URL pointing to YouTube video, an article, a website" %>
     <%= remove_association_link "remove link", f %>
   <% end %>
 </div>

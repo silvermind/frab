@@ -261,6 +261,7 @@ de:
         email_public: "E-Mail öffentlich?"
         abstract: "Abstract"
         description: "Beschreibung"
+        acq_in_orga: "Bekannten im Organisation"
       language:
         language: "Sprache"
       phone_number:
