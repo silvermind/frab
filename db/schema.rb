@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121018184014) do
+ActiveRecord::Schema.define(:version => 20121124234942) do
 
   create_table "availabilities", :force => true do |t|
     t.integer  "person_id"
@@ -183,13 +183,12 @@ ActiveRecord::Schema.define(:version => 20121018184014) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.text     "abstract"
+    t.text     "abstract",              :null => false
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
     t.text     "note"
-    t.text     "bio"
     t.text     "previous_performances"
   end
 
