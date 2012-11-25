@@ -14,6 +14,7 @@
   = f.inputs :name => t("cfp.bio") do
     = f.input :abstract, :input_html => {:rows => 4}, :hint => t("cfp.abstract_hint") 
     = f.input :description, :hint => t("cfp.description_hint")
+    = f.input :acq_in_orga, :input_html => {:rows => 4, :class => "span6"}, :hint => t("cfp.acq_in_orga_hint")
     = dynamic_association :links, t("cfp.links"), f
   = f.buttons do
     = f.commit_button :button_html => {:class => "btn primary"}
