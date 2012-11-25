@@ -1,5 +1,5 @@
 .nested-fields
   = f.inputs do
-    = f.input :title
-    = f.input :url
+    = f.input :title, :hint => t("cfp.link_title_hint")
+    = f.input :url, :hint => t("cfp.link_url_hint")
     = remove_association_link t("remove_link"), f

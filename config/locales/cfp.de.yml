@@ -89,3 +89,5 @@ de:
     thanks_for_confirmation: "Vielen Dank, dass Sie Ihre Teilnahme bestätigt haben."
     confirm: "bestätigen"
     acq_in_orga_hint: "Namen von Bekannten in die OHM2013 Organization."
+    link_title_hint: "Umschreibung vom Link, z.B. Link zu Video ein früeres Event."
+    link_url_hint: "URL vom Link, z.B. ein URL nach ein YouTube video"
