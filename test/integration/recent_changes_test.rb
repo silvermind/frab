@@ -4,8 +4,8 @@ class RecentChangesTest < ActionDispatch::IntegrationTest
 
   setup do
     @conference = create(:conference)
-    user = create(:user, :person => create(:person), :role => "admin", :feedback_enabled => TRUE)
-    post "/session", :user => {:email => user.email, :password => "frab23", :feedback_enabled => FALSE}
+    user = create(:user, :person => create(:person), :role => "admin")
+    post "/session", :user => {:email => user.email, :password => "frab23"}
   end
 
   teardown do
