@@ -9,27 +9,30 @@ FactoryGirl.define do
   end
 
   factory :user do
-    email { Factory.next(:email) }
+    email { FactoryGirl.generate(:email) }
     password "frab23"
     password_confirmation { password }
     confirmed_at { Time.now }
   end
 
   factory :person do
-    email { Factory.next(:email) }
+    email { FactoryGirl.generate(:email) }
     first_name "Fred"
     last_name "Besen"
+    public_name "fredb"
     gender "male"
+    abstract "Right! sayd Fred"
   end
 
   factory :conference do
     title "FrabCon"
-    acronym { Factory.next(:conference_acronym) }
+    acronym { FactoryGirl.generate(:conference_acronym) }
     timeslot_duration 15
     default_timeslots 4
     max_timeslots 20
     first_day { Date.today.since(60.days).to_date }
     last_day { Date.today.since(62.days).to_date }
+    feedback_enabled true
   end
 
   factory :call_for_papers do
