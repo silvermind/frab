@@ -29,7 +29,7 @@ class Person < ActiveRecord::Base
 
   validates_attachment_content_type :avatar, :content_type => [/jpg/, /jpeg/, /png/, /gif/]
 
-  validates_presence_of :public_name, :email
+  validates_presence_of :public_name, :email, :abstract
 
   validates_inclusion_of :gender, :in => GENDERS, :allow_nil => true
 
