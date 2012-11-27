@@ -19,7 +19,9 @@ FactoryGirl.define do
     email { FactoryGirl.generate(:email) }
     first_name "Fred"
     last_name "Besen"
+    public_name "fredb"
     gender "male"
+    abstract "Right! sayd Fred"
   end
 
   factory :conference do
@@ -30,6 +32,7 @@ FactoryGirl.define do
     max_timeslots 20
     first_day { Date.today.since(60.days).to_date }
     last_day { Date.today.since(62.days).to_date }
+    feedback_enabled true
   end
 
   factory :call_for_papers do
