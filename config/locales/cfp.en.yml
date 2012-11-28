@@ -89,6 +89,6 @@ en:
     event_confirmed: "Event confirmed"
     thanks_for_confirmation: "Thank you for confirming your participation."
     confirm: "confirm"
-    acq_in_orga_hint: "Names of people in the OHM2013 organisation you personally know if any."
+    acq_in_orga_hint: "If you already know people in the OHM2013 orga, please consider letting us know."
     link_title_hint: "Description of link for example a previous public performance"
     link_url_hint: "Description of link for example a previous public performance"

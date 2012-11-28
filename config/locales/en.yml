@@ -59,7 +59,7 @@ en:
         state: "State"
         time_slots: "Duration"
       person:
-        acq_in_orga: "Acquantances in organisation"
+        acq_in_orga: "Your connections to OHM2013"
 
   mailers:
     user_mailer:
