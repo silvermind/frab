@@ -56,6 +56,22 @@
 #
 #   # example of redis template
 #
+
+development:
+	redis:
+	url: redis://localhost:6379
+
+production:
+	redis:
+	url: redis://#{Capistrano::CLI.ui.ask("Enter Redis database password: ")}@localhost:6379
+
+test: &test
+redis:
+	url: redis://localhost:6379/0
+
+cucumber:
+	<<: *test
+
 #   base: &base
 #     adapter: sqlite3
 #     timeout: 5000
@@ -117,10 +133,12 @@ Capistrano::Configuration.instance.load do
 				default_template = <<-EOF
         development:
           url:  redis://localhost:6379
-        test:
+        test: &test
           url:  redis://localhost:6379
         production:
           url:  redis://localhost:6379
+        cucumber:
+          <<: *test
 				EOF
 
 				location = fetch(:template_dir, "config/deploy") + '/redis.yml.erb'

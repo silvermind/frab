@@ -49,6 +49,9 @@ end
 
 require "rvm/capistrano"
 require "bundler/capistrano"
+require "whenever/capistrano"
+require "sidekiq/capistrano"
+
 require "./lib/frab/capistrano_redis_yml"
 require "./lib/frab/capistrano_database_yml"
 
