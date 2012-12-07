@@ -51,6 +51,12 @@ Frab::Application.configure do
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 
+  config.action_mailer.default_url_options = {
+	  :from => 'frab_notifier <frab_notifier@ohm2013.com>',
+	  :return_address => 'no-reply@ohm2013.com',
+	  :host => 'localhost:3000' }
+
+
   # Enable threaded mode
   # config.threadsafe!
 
@@ -63,13 +69,6 @@ Frab::Application.configure do
 
   Paperclip.options[:command_path] = "/usr/bin"
 
-  # Redis settings for Redis session
-  SESSION_REDIS_URL = "#{config.redis.url}/0"
-  SESSION_REDIS_NAMESPACE = 'frab_session'
-
-  # Redis settings for SideKiq
-  SIDEKIQ_REDIS_URL = "#{config.redis.url}/12"
-  SIDEKIQ_REDIS_NAMESPACE = 'frab_sidekiq'
 end
 
 # Don't show trace pages in production! Requests shall never originate from localhost!
