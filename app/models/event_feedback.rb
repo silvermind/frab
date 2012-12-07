@@ -10,6 +10,7 @@ class EventFeedback < ActiveRecord::Base
 
   def update_average
     self.event.recalculate_average_feedback!
+    self.event.reload
   end
 
 end

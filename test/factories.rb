@@ -8,6 +8,10 @@ FactoryGirl.define do
     "frabcon#{n}"
   end
 
+  sequence :created_at do |n|
+    (100 - n).days.ago
+  end
+
   factory :user do
     email { FactoryGirl.generate(:email) }
     password "frab23"
@@ -32,6 +36,7 @@ FactoryGirl.define do
     max_timeslots 20
     first_day { Date.today.since(60.days).to_date }
     last_day { Date.today.since(62.days).to_date }
+    created_at { FactoryGirl.generate(:created_at) }
     feedback_enabled true
   end
 
