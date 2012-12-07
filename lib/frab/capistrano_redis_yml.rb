@@ -15,26 +15,26 @@
 #
 # This extension requires the original <tt>config/redis.yml</tt> to be excluded
 # from source code checkout. You can easily accomplish this by renaming
-# the file (for example to database.example.yml) and appending <tt>redis.yml</tt>
+# the file (for example to redis.example.yml) and appending <tt>redis.yml</tt>
 # value to your SCM ignore list.
 #
 #   # Example for Subversion
 #
-#   $ svn mv config/redis.yml config/database.example.yml
+#   $ svn mv config/redis.yml config/redis.example.yml
 #   $ svn propset svn:ignore 'redis.yml' config
 #
 #   # Example for Git
 #
-#   $ git mv config/redis.yml config/database.example.yml
+#   $ git mv config/redis.yml config/redis.example.yml
 #   $ echo 'config/redis.yml' >> .gitignore
 #
 #
 # == Usage
 #
 # Include this file in your <tt>deploy.rb</tt> configuration file.
-# Assuming you saved this recipe as capistrano_database_yml.rb:
+# Assuming you saved this recipe as capistrano_redis_yml.rb:
 #
-#   require "capistrano_database_yml"
+#   require "capistrano_redis_yml"
 #
 # Now, when <tt>deploy:setup</tt> is called, this script will automatically
 # create the <tt>redis.yml</tt> file in the shared folder.
@@ -54,29 +54,29 @@
 #   # store your custom template at foo/bar/redis.yml.erb
 #   set :template_dir, "foo/bar"
 #
-#   # example of database template
+#   # example of redis template
 #
 #   base: &base
 #     adapter: sqlite3
 #     timeout: 5000
 #   development:
-#     database: #{shared_path}/db/development.sqlite3
+#     redis: #{shared_path}/db/development.sqlite3
 #     <<: *base
 #   test:
-#     database: #{shared_path}/db/test.sqlite3
+#     redis: #{shared_path}/db/test.sqlite3
 #     <<: *base
 #   production:
 #     adapter: mysql
-#     database: #{application}_production
+#     redis: #{application}_production
 #     username: #{user}
-#     password: #{Capistrano::CLI.ui.ask("Enter MySQL database password: ")}
+#     password: #{Capistrano::CLI.ui.ask("Enter MySQL redis password: ")}
 #     encoding: utf8
 #     timeout: 5000
 #
 # Because this is an Erb template, you can place variables and Ruby scripts
 # within the file.
 # For instance, the template above takes advantage of Capistrano CLI
-# to ask for a MySQL database password instead of hard coding it into the template.
+# to ask for a MySQL redis password instead of hard coding it into the template.
 #
 # === Password prompt
 #
