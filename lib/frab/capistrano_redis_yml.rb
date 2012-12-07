@@ -95,7 +95,7 @@ Capistrano::Configuration.instance.load do
 
 	namespace :deploy do
 
-		namespace :db do
+		namespace :redis do
 
 			desc <<-DESC
         Creates the redis.yml configuration file in shared path.
@@ -141,8 +141,8 @@ Capistrano::Configuration.instance.load do
 
 		end
 
-		after "deploy:setup",           "deploy:db:setup"   unless fetch(:skip_db_setup, false)
-		after "deploy:finalize_update", "deploy:db:symlink"
+		#after "deploy:setup",           "deploy:db:setup"   unless fetch(:skip_db_setup, false)
+		#after "deploy:finalize_update", "deploy:db:symlink"
 
 	end
 
