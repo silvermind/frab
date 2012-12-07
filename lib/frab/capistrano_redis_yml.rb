@@ -56,38 +56,17 @@
 #
 #   # example of redis template
 #
-
-development:
-	redis:
-	url: redis://localhost:6379
-
-production:
-	redis:
-	url: redis://#{Capistrano::CLI.ui.ask("Enter Redis database password: ")}@localhost:6379
-
-test: &test
-redis:
-	url: redis://localhost:6379/0
-
-cucumber:
-	<<: *test
-
-#   base: &base
-#     adapter: sqlite3
-#     timeout: 5000
 #   development:
-#     redis: #{shared_path}/db/development.sqlite3
-#     <<: *base
-#   test:
-#     redis: #{shared_path}/db/test.sqlite3
-#     <<: *base
+#     redis:
+#	    url: redis://localhost:6379
 #   production:
-#     adapter: mysql
-#     redis: #{application}_production
-#     username: #{user}
-#     password: #{Capistrano::CLI.ui.ask("Enter MySQL redis password: ")}
-#     encoding: utf8
-#     timeout: 5000
+#	  redis:
+#	    url: redis://localhost:6379
+#   test: &test
+#     redis:
+#       url: redis://localhost:6379/0
+#   cucumber:
+#     <<: *test
 #
 # Because this is an Erb template, you can place variables and Ruby scripts
 # within the file.
