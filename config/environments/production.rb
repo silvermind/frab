@@ -62,6 +62,14 @@ Frab::Application.configure do
   config.active_support.deprecation = :notify
 
   Paperclip.options[:command_path] = "/usr/bin"
+
+  # Redis settings for Redis session
+  SESSION_REDIS_URL = "#{config.redis.url}/0"
+  SESSION_REDIS_NAMESPACE = 'frab_session'
+
+  # Redis settings for SideKiq
+  SIDEKIQ_REDIS_URL = "#{config.redis.url}/12"
+  SIDEKIQ_REDIS_NAMESPACE = 'frab_sidekiq'
 end
 
 # Don't show trace pages in production! Requests shall never originate from localhost!

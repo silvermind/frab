@@ -29,6 +29,9 @@ gem 'twitter-bootstrap-rails', '< 1.9'
 gem 'formtastic-bootstrap'
 gem 'prawn'
 gem 'prawn_rails'
+gem 'sidekiq'
+gem 'redis'
+gem 'redis-namespace'
 
 group :development, :test do
   gem 'ruby-debug', :platforms => :mri_18

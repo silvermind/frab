@@ -1,0 +1,10 @@
+# Sidekiq configuration
+# Options here can still be overridden by cmd line args.
+---
+:verbose: true
+:concurrency: 12
+:queues:
+  - [often, 3]
+  - [default, 5]
+  - [seldom, 2]
+  - [mailer, 2]
