@@ -141,8 +141,8 @@ Capistrano::Configuration.instance.load do
 
 		end
 
-		#after "deploy:setup",           "deploy:db:setup"   unless fetch(:skip_db_setup, false)
-		#after "deploy:finalize_update", "deploy:db:symlink"
+		after "deploy:setup",           "deploy:redis:setup"   unless fetch(:skip_redis_setup, false)
+		after "deploy:finalize_update", "deploy:redis:symlink"
 
 	end
 
