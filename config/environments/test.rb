@@ -47,13 +47,4 @@ Frab::Application.configure do
   config.after_initialize do
     PaperTrail.enabled = false
   end
-
-  # Redis settings for Redis session
-  SESSION_REDIS_URL = "#{config.redis.url}/0"
-  SESSION_REDIS_NAMESPACE = 'frab_session'
-
-  # Redis settings for SideKiq
-  SIDEKIQ_REDIS_URL = "#{config.redis.url}/12"
-  SIDEKIQ_REDIS_NAMESPACE = 'frab_sidekiq'
-
 end
