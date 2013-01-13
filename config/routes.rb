@@ -1,6 +1,8 @@
 Frab::Application.routes.draw do
 
-  scope "(:locale)" do
+	get "version", :to => 'version#index'
+
+	scope "(:locale)" do
 
     resource :session
 
