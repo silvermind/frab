@@ -91,6 +91,15 @@ like unicorn or passenger.)
 Navigate to http://localhost:3000/ and login as 
 "admin@example.org" with password "test123".
 
+## Running a production server
+
+You might want to modify your ***config/settings.yml*** file 
+if you want to run your tests on a production server.
+
+To avoid 500 error on CFP registration, you'll need to 
+provide an existing domain in the ***from_email*** production
+setting, and you might want to use the http ***protocol***.
+
 ## Migrating from pentabarf
 
 frab comes with a script that offers limited capabilities of
