@@ -12,6 +12,7 @@ gem 'will_paginate'
 gem 'paperclip', '< 3.0'
 gem 'gravatar-ultimate'
 gem 'formtastic', '~> 2.0.2'
+gem 'formtastic-bootstrap'
 gem 'acts_as_indexed'
 gem 'cocoon'
 gem 'paper_trail', '2.3.3'
@@ -53,5 +54,4 @@ group :assets do
   gem 'jquery-rails', '~> 1.0'
   gem 'jquery-ui-rails'
   gem 'twitter-bootstrap-rails', '< 1.9'
-  gem 'formtastic-bootstrap'
-end 
+end
