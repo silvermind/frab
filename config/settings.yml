@@ -5,7 +5,7 @@ development:
   protocol: http
   # Default 'From' address, used when sending emails
   from_email: frab_dev@localhost
-  content_mail: frab_dev@localhost
+  content_mail: postmaster@localhost
   smtp_settings:
     address: localhost
     enable_starttls_auto: false
@@ -14,7 +14,7 @@ test:
   host: frab.test
   protocol: http
   from_email: frab_test@localhost
-  content_mail: frab_test@localhost
+  content_mail: postmaster@localhost
 
 production:
   # no need to specify port, when default (80) is used
