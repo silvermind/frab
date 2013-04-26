@@ -27,9 +27,6 @@ de:
         Schöne Grüße 
 
         Das %{title}-Team
-    content_list_mailer:
-      notify_new_person: '[frab] Neue Anmeldung'
-      notify_updated_person: '[frab] Geänderte Anmeldung'
     event_rejection:
       subject: "Deine Einreichung zur %{title}"
       greeting: "Hallo %{name},"

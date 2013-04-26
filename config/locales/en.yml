@@ -65,3 +65,10 @@ en:
     user_mailer:
       confirmation_instructions: "[OHM2013] Your account activation for FRAB"
       password_reset_instructions: "Reset Password"
+    content_list_mailer:
+      notify_new_person: '[frab] new signup'
+      notify_new_event: '[frab] new event'
+      notify_new_event_rating: '[frab] new event rating'
+      notify_updated_person: '[frab] updated signup'
+      notify_updated_event: '[frab] updated event'
+      notify_updated_event_rating: '[frab] updated event rating'

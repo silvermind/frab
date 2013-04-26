@@ -280,6 +280,13 @@ de:
     user_mailer:
       confirmation_instructions: "Account aktivieren"
       password_reset_instructions: "Password zurücksetzen"
+    content_list_mailer:
+      notify_new_person: '[frab] Neue Anmeldung'
+      notify_new_event: '[frab] Neu Event'
+      notify_new_event_rating: '[frab] Neue Event Rating'
+      notify_updated_person: '[frab] Geänderte Anmeldung'
+      notify_updated_event: '[frab] Geänderte Event'
+      notify_updated_event_rating: '[frab] Geänderte Event Rating'
   formtastic:
     actions:
       create: "%{model} anlegen" 
