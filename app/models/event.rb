@@ -33,6 +33,8 @@ class Event < ActiveRecord::Base
 
   validates_presence_of :title, :time_slots
 
+  after_create :send_new_event_notification
+  after_update :send_updated_event_notification
   after_save :update_conflicts
 
   scope :associated_with, lambda {|person| joins(:event_people).where(:"event_people.person_id" => person.id)}
@@ -216,6 +218,14 @@ class Event < ActiveRecord::Base
     else
       return result.to_f / rating_count
     end
+  end
+
+  def send_new_event_notification
+	  ContentListMailer.notify_new_event(self).deliver
+  end
+
+  def send_updated_event_notification
+	  ContentListMailer.notify_updated_event(self).deliver
   end
 
 end

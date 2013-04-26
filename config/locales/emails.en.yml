@@ -23,6 +23,9 @@ en:
         Kind regards
 
         The %{title} team
+    content_list_mailer:
+      notify_new_person: '[frab] new signup'
+      notify_updated_person: '[frab] updated signup'
     event_rejection:
       subject: "Your submission to %{title}"
       greeting: "Dear %{name},"

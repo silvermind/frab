@@ -46,6 +46,9 @@ class Person < ActiveRecord::Base
     joins(:events => :conference).where(:"conferences.id" => conference.id).where(:"events.state" => "confirmed")
   }
 
+  after_create :send_new_person_notification
+  after_update :send_updated_person_notification
+
   def full_name
     if first_name.blank? or last_name.blank? and not public_name.blank?
       public_name
@@ -93,6 +96,14 @@ class Person < ActiveRecord::Base
     conference_locales = conference.languages.all.map{|l| l.code.downcase.to_sym}
     return :en if own_locales.include? :en or own_locales.empty? or (own_locales & conference_locales).empty?
     (own_locales & conference_locales).first
+  end
+
+  def send_new_person_notification
+	  ContentListMailer.notify_new_person(self).deliver
+  end
+
+  def send_updated_person_notification
+	  ContentListMailer.notify_updated_person(self).deliver
   end
 
   def to_s
