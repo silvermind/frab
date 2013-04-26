@@ -77,6 +77,7 @@
   .row
     .span16
       %h2 My rating
+      5 stars: Perfect! Keynote material, 4 stars: Good. Main stage material, 3 stars: Good. Smaller stage material, 2 stars: Might be OK, possibly maybe, 1 stars: Rather not, 0 stars: Kill on sight, with fire
       = semantic_form_for @rating, :url => event_event_rating_path do |f|
         = f.inputs do
           = f.input :rating, :as => :rating
@@ -114,6 +115,7 @@
 :javascript
   $(document).ready(function() {
     $("#my_rating").raty({
+      hintList: ['Rather NOT!', 'Might be OK, possible maybe', 'Good. Smaller stage material', 'Good. Main stage material', 'Perfect! Keynote material'],
       path: "",
       starOn: '#{raty_icon_path("on")}',
       starHalf: '#{raty_icon_path("half")}',
@@ -125,6 +127,7 @@
       targetKeep: true
     });
     $("#total_rating").raty({
+      hintList: ['Rather NOT!', 'Might be OK, possible maybe', 'Good. Smaller stage material', 'Good. Main stage material', 'Perfect! Keynote material'],
       readOnly: true,
       path: "",
       starOn: '#{raty_icon_path("on")}',
@@ -135,6 +138,7 @@
     });
     $("td .rating").each(function(index) {
       $(this).raty({
+      hintList: ['Rather NOT!', 'Might be OK, possible maybe', 'Good. Smaller stage material', 'Good. Main stage material', 'Perfect! Keynote material'],
         readOnly: true,
         path: "",
         starOn: '#{raty_icon_path("on")}',
