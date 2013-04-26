@@ -5,6 +5,9 @@ development:
   protocol: http
   # Default 'From' address, used when sending emails
   from_email: frab_dev@localhost
+  smtp_settings:
+    address: localhost
+    enable_starttls_auto: false
 
 test:
   host: frab.test
