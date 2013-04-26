@@ -44,6 +44,9 @@ end
 group :development do
   gem 'hpricot'
   gem 'yaml_db'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request', '0.2.1'
 end
 
 group :assets do
