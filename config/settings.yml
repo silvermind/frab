@@ -21,7 +21,7 @@ production:
   host: cfp.ohm2013.org
   protocol: https
   from_email: no-reply@ifcat.org
-  content_mail: content@ohm2013.org
+  content_mail: frab-notify@ohm2013.org
   # smtp server settings. see
   # http://api.rubyonrails.org/classes/ActionMailer/Base.html
   # for all available options
