@@ -1,6 +1,6 @@
 class Person < ActiveRecord::Base
 
-  GENDERS = ["male", "female"]
+  GENDERS = ["male", "female", "unspecified"]
 
   has_many :event_people
   has_many :phone_numbers
