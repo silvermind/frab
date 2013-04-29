@@ -77,13 +77,13 @@
   .row
     .span16
       %h2 My rating
-      5 stars: Perfect! Keynote material, 4 stars: Good. Main stage material, 3 stars: Good. Smaller stage material, 2 stars: Might be OK, possibly maybe, 1 stars: Rather not, 0 stars: Kill on sight, with fire
       = semantic_form_for @rating, :url => event_event_rating_path do |f|
         = f.inputs do
           = f.input :rating, :as => :rating
-          = f.input :comment, :input_html => {:rows => 3}
+          = f.input :comment, :input_html => {:rows => 3, :class => "span13"}
         = f.buttons do
           = f.commit_button :button_html => {:class => "btn primary"}
+          = action_button "primary", "Rating legend", '#', :hint => "5 stars: Perfect! Keynote material / 4 stars: Good. Main stage material / 3 stars: Good. Smaller stage material / 2 stars: Might be OK, possibly maybe / 1 stars: Rather not / 0 stars: Kill on sight - with fire"
   .row
     .span16
       %h2 All ratings
