@@ -16,7 +16,7 @@ set :branch, fetch(:branch, "master")
 # Tell Capistrano the servers it can play with
 server "services.ifcat.org", :app, :web, :db, :primary => true
 
-# RVM settigns
+# RVM settings
 set :rvm_ruby_string, "ruby-1.9.3-p194@frab"
 set :rvm_type, :user
 
@@ -53,12 +53,12 @@ end
 desc "Show currently deployed revision on server."
 task :revisions, :roles => :app do
 	current, previous, latest = current_revision[0,7], previous_revision[0,7], real_revision[0,7]
-	puts "\n" << "-"*63
-	puts "Master Revision: #{latest}".yellow
+	puts "\n----------------------------------------------------------------------------------------------"
+	puts "Master Revision: #{latest}"
 	puts "\n\n"
-	puts "#{application.capitalize} - #{stage.capitalize}"..yellow
-	puts "Deployed Revision: #{current}".yellow
-	puts "Previous Revision: #{previous}".yellow
+	puts "#{application.capitalize} - #{stage.capitalize}"
+	puts "Deployed Revision: #{current}"
+	puts "Previous Revision: #{previous}"
 	puts "\n\n"
 
 	# If deployed and master are the same, show the difference between the last 2 deployments.
@@ -92,24 +92,30 @@ namespace :deploy do
 
 		if "#{skip_tests}" == "true"
 			puts "\n"
-			puts "="*63.yellow
+			puts "-"*70
 			puts "Deploying for branch: '#{branch}' in environment: '#{rails_env}'".yellow
 			puts ">>> SKIPPING TESTS <<<<".yellow
-			puts "="*63.yellow
-
+			puts "-"*70
 		else
 			puts "--> Running tests, please wait ..."
 			puts "\n"
-			puts "="*63.yellow
-			puts "Deploying for branch: '#{branch}' in environment: '#{rails_env}'".yellow
-			puts "Running tests, please wait...".yellow
-			puts "="*63.yellow
-
+			puts "-"*70
+			puts "Deploying for branch: '#{branch}' in environment: '#{rails_env}'"
+			puts "Running tests, please wait..."
+			puts "-"*70
 			unless system "bundle exec rake" #script/chrome_tests" #' > /dev/null'
-				puts "--> Tests failed.".red
+				puts "********************"
+				puts "********************"
+				puts "********************"
+				puts "--> Tests failed."
+				puts "********************"
+				puts "********************"
+				puts "********************"
 				exit
 			else
-				puts "--> Tests passed".green
+				puts "********************"
+				puts "--> Tests passed <--"
+				puts "********************"
 			end
 		end
 	end

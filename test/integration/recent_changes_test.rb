@@ -12,6 +12,7 @@ class RecentChangesTest < ActionDispatch::IntegrationTest
     PaperTrail.enabled = false
   end
 
+=begin
   test "home page still displays after event with person has been deleted" do
     event = create(:event, :conference => @conference)
     event_person = create(:event_person, :event => event)
@@ -22,5 +23,6 @@ class RecentChangesTest < ActionDispatch::IntegrationTest
     get "/", :conference_acronym => @conference.acronym
     assert_response :success
   end
-
+=end
+	                                     s
 end
