@@ -70,6 +70,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
+    colored (1.2)
     commonjs (0.2.6)
     connection_pool (1.0.0)
     daemons (1.1.9)
@@ -240,6 +241,7 @@ DEPENDENCIES
   cocoon
   coffee-filter
   coffee-rails (~> 3.2.0)
+  colored
   factory_girl_rails
   formtastic (~> 2.0.2)
   formtastic-bootstrap

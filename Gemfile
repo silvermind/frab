@@ -31,6 +31,7 @@ gem 'whenever'
 gem 'sidekiq'
 gem 'redis'
 gem 'redis-namespace'
+gem 'colored'
 
 group :development, :test do
   gem 'factory_girl_rails'
