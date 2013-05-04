@@ -19,7 +19,7 @@ class RecentChangesTest < ActionDispatch::IntegrationTest
     assert_difference "Event.count", -1 do
       delete "/#{@conference.acronym}/events/#{event.id}"
     end
-    get "/", :conference_acronym => @conference.acronym
+    get "/#{@conference.acronym}"
     assert_response :success
   end
 
