@@ -56,7 +56,7 @@ task :revisions, :roles => :app do
 	puts "\n----------------------------------------------------------------------------------------------"
 	puts "Master Revision: #{latest}"
 	puts "\n\n"
-	puts "#{application.capitalize} - #{stage.capitalize}"
+	puts "#{application.capitalize}"
 	puts "Deployed Revision: #{current}"
 	puts "Previous Revision: #{previous}"
 	puts "\n\n"
