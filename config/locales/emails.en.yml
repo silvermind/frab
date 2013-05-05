@@ -19,7 +19,9 @@ en:
         conference program. You can also specify your availability at
         different times there. We will try to consider this when planning the
         final schedule.
-      goodbye: |
+        
+        Also by confirming your lecture/speech/performance/workshop/submission, you accept that it will be live-streamed on the internet as well as archived. You also accept that your contribution will be made available under a CC-BY-SA licence. You also warrant that you have secured all needed permissions and (copyright) licenses for your contribution and that you indemnify IFCAT foundation in this regard.
+      goodbye: 
         Kind regards
 
         The %{title} team
