@@ -150,6 +150,12 @@ class EventsController < ApplicationController
     redirect_to @event, :notice => 'Event was successfully updated.' 
   end
 
+  def add_me
+    @event = Event.find(params[:id])
+    @event.event_people << EventPerson.new(:person => current_user.person, :event_role => "coordinator", :role_state => "confirmed")
+    redirect_to @event, :notice => 'Successfully added as coordinator'
+  end
+
   # DELETE /events/1
   # DELETE /events/1.xml
   def destroy

@@ -92,6 +92,7 @@ Frab::Application.routes.draw do
           get :people
           get :edit_people
           put :update_state
+          put :add_me
         end
         resource :event_rating
         resources :event_feedbacks
