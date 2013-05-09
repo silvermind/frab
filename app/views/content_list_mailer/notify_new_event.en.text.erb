@@ -6,9 +6,9 @@ A new event has been created:
      Title: <%= @event.title %>
   Subtitle: <%= @event.subtitle %>
 Event type: <%= @event.event_type %>
-
-Abstract:
-
+      Link: <%= event_url('en', @event.conference.acronym, @event.id) %>
+  Abstract:
+-----------
 <%= @event.abstract %>
 -------------------------------------8<------------------------------
 

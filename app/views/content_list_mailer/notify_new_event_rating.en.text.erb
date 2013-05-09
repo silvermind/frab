@@ -6,8 +6,8 @@ A new event rating has been created:
      Title: <%= @event_rating.event.title %>
   Subtitle: <%= @event_rating.event.subtitle %>
 Event type: <%= @event_rating.event.event_type %>
-
     Rating: <%= @event_rating.rating %>
+      Link: <%= event_url('en', @event_rating.event.conference.acronym, @event_rating.event.id) %>/event_rating
 -------------------------------------8<------------------------------
 
 Regards,

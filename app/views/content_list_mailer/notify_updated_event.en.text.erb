@@ -6,9 +6,14 @@ An event has been updated:
      Title: <%= @event.title %>
   Subtitle: <%= @event.subtitle %>
 Event type: <%= @event.event_type %>
-
+      Link: <%= event_url('de', @event.conference.acronym, @event.id) %>
+Changes:
+--------
+<% @event.changes.each do |field, change| %>
+<%= "#{field} changes from #{change[0]} to #{change[1]}" %>
+<% end %>
 Abstract:
-
+---------
 <%= @event.abstract %>
 -------------------------------------8<------------------------------
 

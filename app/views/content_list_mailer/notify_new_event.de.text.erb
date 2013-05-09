@@ -6,9 +6,9 @@ Neues Event:
     Title: <%= @event.title %>
  Subtitle: <%= @event.subtitle %>
 Event typ: <%= @event.event_type %>
-
-Abstract:
-
+     Link: <%= event_url('de', @event.conference.acronym, @event.id) %>
+ Abstract:
+----------
 <%= @event.abstract %>
 -------------------------------------8<------------------------------
 

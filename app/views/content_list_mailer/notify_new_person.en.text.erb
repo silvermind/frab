@@ -3,11 +3,11 @@ Hi content group,
 A new person has signed up:
 
 -------------------------------------8<------------------------------
-Name:  <%= @person.first_name %><%= @person.last_name %>
-Email: <%= @person.email %>
-
+    Name: <%= @person.full_name %>
+   Email: <%= @person.email %>
+    Link: <%= person_url('en', @conference.acronym, @person.id) %>
 Abstract:
-
+---------
 <%= @person.abstract %>
 -------------------------------------8<------------------------------
 

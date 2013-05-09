@@ -3,11 +3,11 @@ Hallo Einhaltsgruppe,
 Ein neues Person hat sich angemeldet:
 
 -------------------------------------8<------------------------------
-Name:  <%= @person.first_name %><%= @person.last_name %>
-Email: <%= @person.email %>
-
+    Name: <%= @person.full_name %>
+   Email: <%= @person.email %>
+    Link: <%= person_url('de', @conference.acronym, @person.id) %>
 Abstract:
-
+---------
 <%= @person.abstract %>
 -------------------------------------8<------------------------------
 

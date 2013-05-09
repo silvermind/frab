@@ -99,11 +99,11 @@ class Person < ActiveRecord::Base
   end
 
   def send_new_person_notification
-	  ContentListMailer.notify_new_person(self).deliver
+	  ContentListMailer.notify_new_person(@conference, self).deliver
   end
 
   def send_updated_person_notification
-	  ContentListMailer.notify_updated_person(self).deliver
+	  ContentListMailer.notify_updated_person(@conference, self).deliver
   end
 
   def to_s

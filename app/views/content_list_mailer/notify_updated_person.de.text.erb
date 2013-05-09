@@ -3,11 +3,16 @@ Hallo Einhaltsgruppe,
 Ein Person hat seine Anmeldung geändert. Neue daten:
 
 -------------------------------------8<------------------------------
-Name:  <%= @person.first_name %><%= @person.last_name %>
-Email: <%= @person.email %>
-
-Abstract:
-
+      Name:  <%= @person.first_name %><%= @person.last_name %>
+     Email: <%= @person.email %>
+      Link: <%= person_url('de', @conference.acronym, @person.id) %>
+Änderungen:
+-----------
+<% @person.changes.each do |field, change| %>
+<% = "#{field} ist geändert von #{change[0]} nach #{change[1]}" %>
+<% end %>
+  Abstract:
+-----------
 <%= @person.abstract %>
 -------------------------------------8<------------------------------
 
