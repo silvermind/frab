@@ -25,6 +25,11 @@ module ApplicationHelper
       options["data-placement"] = "below"
       options[:hint] = nil
     end
+
+    if button_type == "danger"
+      options[:confirm] = "Are you sure?" unless options[:confirm]
+    end
+
     link_to link_name, path, options
   end
 
