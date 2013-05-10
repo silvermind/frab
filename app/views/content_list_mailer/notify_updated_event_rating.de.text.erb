@@ -11,7 +11,7 @@ Event type: <%= @event_rating.event.event_type %>
 Änderungen:
 -----------
 <% @event_rating.changes.each do |field, change| %>
-<% = "#{field} ist geändert von #{change[0]} nach #{change[1]}" %>
+<%= "#{field} ist geändert von #{change[0]} nach #{change[1]}" %>
 <% end %>
 -------------------------------------8<------------------------------
 

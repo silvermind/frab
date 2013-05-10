@@ -12,7 +12,7 @@ Event type: <%= @event.event_type %>
 Änderungen:
 -----------
 <% @event.changes.each do |field, change| %>
-<% = "#{field} ist geändert von #{change[0]} nach #{change[1]}" %>
+<%= "#{field} ist geändert von #{change[0]} nach #{change[1]}" %>
 <% end %>
 Abstract:
 ---------

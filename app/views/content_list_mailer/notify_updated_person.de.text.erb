@@ -11,7 +11,7 @@ Ein Person hat seine Anmeldung geändert. Neue daten:
 Änderungen:
 -----------
 <% @person.changes.each do |field, change| %>
-<% = "#{field} ist geändert von #{change[0]} nach #{change[1]}" %>
+<%= "#{field} ist geändert von #{change[0]} nach #{change[1]}" %>
 <% end %>
   Abstract:
 -----------
