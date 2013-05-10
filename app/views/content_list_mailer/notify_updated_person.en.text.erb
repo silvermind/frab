@@ -5,7 +5,9 @@ A person updated his/her info. New info:
 -------------------------------------8<------------------------------
     Name: <%= @person.first_name %><%= @person.last_name %>
    Email: <%= @person.email %>
+<% if @conference %>
     Link: <%= person_url('en', @conference.acronym, @person.id) %>
+<% end %>
 Changes:
 --------
 <% @person.changes.each do |field, change| %>

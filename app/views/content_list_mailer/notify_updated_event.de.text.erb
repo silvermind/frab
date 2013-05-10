@@ -6,7 +6,9 @@ Geändertes Event:
      Title: <%= @event.title %>
   Subtitle: <%= @event.subtitle %>
 Event type: <%= @event.event_type %>
-      Link: <%= event_url('de', @event.conference.acronym, @event.id) %>
+<% if @conference %>
+    Link: <%= event_url('de', @event.conference.acronym, @event.id) %>
+<% end %>
 Änderungen:
 -----------
 <% @event.changes.each do |field, change| %>

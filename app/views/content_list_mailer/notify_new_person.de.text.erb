@@ -5,7 +5,9 @@ Ein neues Person hat sich angemeldet:
 -------------------------------------8<------------------------------
     Name: <%= @person.full_name %>
    Email: <%= @person.email %>
+<% if @conference %>
     Link: <%= person_url('de', @conference.acronym, @person.id) %>
+<% end %>
 Abstract:
 ---------
 <%= @person.abstract %>
