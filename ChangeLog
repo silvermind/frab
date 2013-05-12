@@ -1,0 +1,9 @@
+2013-06-09  Ruurd Pels <rfpels@gmail.com>
+
+    * Add quick-add-person functionality
+
+    * Add notification mails including changes made
+
+    * Start a ChangeLog file in the canonical ChangeLog format (cf http://en.wikipedia.org/wiki/Changelog)
+
+
