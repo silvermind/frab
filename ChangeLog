@@ -6,4 +6,4 @@
 
     * Start a ChangeLog file in the canonical ChangeLog format (cf http://en.wikipedia.org/wiki/Changelog)
 
-
+    * Provide access to ChangeLog through <frab_url>/changelog
