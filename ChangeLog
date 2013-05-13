@@ -1,4 +1,4 @@
-2013-06-09  Ruurd Pels <rfpels@gmail.com>
+2013-05-09  Ruurd Pels <rfpels@gmail.com>
 
     * Add quick-add-person functionality
 
@@ -7,3 +7,7 @@
     * Start a ChangeLog file in the canonical ChangeLog format (cf http://en.wikipedia.org/wiki/Changelog)
 
     * Provide access to ChangeLog through <frab_url>/changelog
+
+2013-05-13  Ruurd Pels <rfpels@gmail.com>
+
+    * Make title in event ratings list clickable to the individual event itself
