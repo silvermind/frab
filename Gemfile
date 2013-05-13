@@ -32,6 +32,10 @@ gem 'sidekiq'
 gem 'redis'
 gem 'redis-namespace'
 
+group :test do
+  gem 'test-unit'
+end
+
 group :development, :test do
   gem 'factory_girl_rails'
 end
