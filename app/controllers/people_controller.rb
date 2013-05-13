@@ -23,7 +23,7 @@ class PeopleController < ApplicationController
         end
       end
       format.text do
-        @people = Person.speaking_at(@conference)
+        @people = Person.sort('created_at DESC').speaking_at(@conference)
         render :text => @people.map(&:email).join("\n")
       end
     end
