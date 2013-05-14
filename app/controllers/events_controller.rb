@@ -6,6 +6,9 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.xml
   def index
+    # force a sort order if no q param
+    params[:q] ||= { s: 'created_at desc' }
+
     if params[:term]
       @search = @conference.events.with_query(params[:term]).search(params[:q])
       @events = @search.result.paginate :page => params[:page]
