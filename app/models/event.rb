@@ -45,8 +45,6 @@ class Event < ActiveRecord::Base
   scope :public, where(:public => true)
   scope :confirmed, where(:state => :confirmed)
 
-  default_scope order('created_at DESC')
-
   acts_as_indexed :fields => [:title, :subtitle, :event_type, :abstract, :description, :track_name]
 
   has_paper_trail 
