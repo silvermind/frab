@@ -76,13 +76,37 @@
           = simple_format @event.description
   .row
     .span16
-      %h2 My rating
+      %h2
+        My rating
+        %small= link_to_function "Toggle Rating Legend >>", "$('#full_rating').toggle();"
+      #full_rating{:style => "display:none;"}
+        %table.zebra-striped
+          %tbody
+            %tr
+              %td 5 stars
+              %td Perfect! Keynote material
+            %tr
+              %td 4 stars
+              %td Good. Main stage material
+            %tr
+              %td 3 stars
+              %td Good. Smaller stage material
+            %tr
+              %td 2 stars
+              %td Might be OK, possibly maybe
+            %tr
+              %td 1 stars
+              %td Rather not
+            %tr
+              %td 0 stars
+              %td Kill on sight - with fire
       = semantic_form_for @rating, :url => event_event_rating_path do |f|
         = f.inputs do
           = f.input :rating, :as => :rating
-          = f.input :comment, :input_html => {:rows => 3}
+          = f.input :comment, :input_html => {:rows => 3, :class => "span13"}
         = f.buttons do
           = f.commit_button :button_html => {:class => "btn primary"}
+          = action_button "success", "Rating legend", '#', :hint => "5 stars: Perfect! Keynote material / 4 stars: Good. Main stage material / 3 stars: Good. Smaller stage material / 2 stars: Might be OK, possibly maybe / 1 stars: Rather not / 0 stars: Kill on sight - with fire"
   .row
     .span16
       %h2 All ratings
@@ -114,6 +138,7 @@
 :javascript
   $(document).ready(function() {
     $("#my_rating").raty({
+      hintList: ['Rather NOT!', 'Might be OK, possible maybe', 'Good. Smaller stage material', 'Good. Main stage material', 'Perfect! Keynote material'],
       path: "",
       starOn: '#{raty_icon_path("on")}',
       starHalf: '#{raty_icon_path("half")}',
@@ -125,6 +150,7 @@
       targetKeep: true
     });
     $("#total_rating").raty({
+      hintList: ['Rather NOT!', 'Might be OK, possible maybe', 'Good. Smaller stage material', 'Good. Main stage material', 'Perfect! Keynote material'],
       readOnly: true,
       path: "",
       starOn: '#{raty_icon_path("on")}',
@@ -135,6 +161,7 @@
     });
     $("td .rating").each(function(index) {
       $(this).raty({
+      hintList: ['Rather NOT!', 'Might be OK, possible maybe', 'Good. Smaller stage material', 'Good. Main stage material', 'Perfect! Keynote material'],
         readOnly: true,
         path: "",
         starOn: '#{raty_icon_path("on")}',

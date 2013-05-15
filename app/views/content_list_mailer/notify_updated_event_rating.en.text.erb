@@ -1,0 +1,19 @@
+Hello content group,
+
+A new event rating has been updated:
+
+-------------------------------------8<------------------------------
+     Title: <%= @event_rating.event.title %>
+  Subtitle: <%= @event_rating.event.subtitle %>
+Event type: <%= @event_rating.event.event_type %>
+    Rating: <%= @event_rating.rating %>
+      Link: <%= event_url('en', @event_rating.event.conference.acronym, @event_rating.event.id) %>/event_rating
+   Changes:
+-----------
+<% @event_rating.changes.each do |field, change| %>
+<%= "#{field} changes from #{change[0]} to #{change[1]}" %>
+<% end %>
+-------------------------------------8<------------------------------
+
+Regards,
+FRAB

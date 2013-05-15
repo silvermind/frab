@@ -52,7 +52,7 @@
             - @events.each do |event|
               %tr
                 %td= image_box event.logo, :small
-                %td= event.title
+                %td= link_to event.title, event_path(event)
                 %td= event.track.try(:name)
                 %td= event.event_type
                 %td= event.state

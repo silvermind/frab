@@ -1,6 +1,7 @@
 Frab::Application.routes.draw do
 
 	get "version", :to => 'version#index'
+  get "changelog", :to => 'changelog#index'
 
 	scope "(:locale)" do
 

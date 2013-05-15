@@ -5,17 +5,23 @@ development:
   protocol: http
   # Default 'From' address, used when sending emails
   from_email: frab_dev@localhost
+  content_mail: postmaster@localhost
+  smtp_settings:
+    address: localhost
+    enable_starttls_auto: false
 
 test:
   host: frab.test
   protocol: http
   from_email: frab_test@localhost
+  content_mail: postmaster@localhost
 
 production:
   # no need to specify port, when default (80) is used
   host: cfp.ohm2013.org
   protocol: https
   from_email: no-reply@ifcat.org
+  content_mail: frab-notify@ohm2013.org
   # smtp server settings. see
   # http://api.rubyonrails.org/classes/ActionMailer/Base.html
   # for all available options

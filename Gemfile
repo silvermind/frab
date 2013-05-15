@@ -32,18 +32,20 @@ gem 'sidekiq'
 gem 'redis'
 gem 'redis-namespace'
 
-group :development, :test do
-  gem 'factory_girl_rails'
+group :test do
+  gem 'test-unit'
 end
 
-group :test do
-  gem 'minitest'
-  gem 'turn', :require => false
+group :development, :test do
+  gem 'factory_girl_rails'
 end
 
 group :development do
   gem 'hpricot'
   gem 'yaml_db'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request', '0.2.1'
 end
 
 group :assets do

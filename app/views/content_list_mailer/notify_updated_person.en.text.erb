@@ -1,0 +1,22 @@
+Hi content group,
+
+A person updated his/her info. New info:
+
+-------------------------------------8<------------------------------
+    Name: <%= @person.first_name %><%= @person.last_name %>
+   Email: <%= @person.email %>
+<% if @conference %>
+    Link: <%= person_url('en', @conference.acronym, @person.id) %>
+<% end %>
+Changes:
+--------
+<% @person.changes.each do |field, change| %>
+<%= "#{field} changes from #{change[0]} to #{change[1]}" %>
+<% end %>
+Abstract:
+---------
+<%= @person.abstract %>
+-------------------------------------8<------------------------------
+
+Best regards,
+FRAB

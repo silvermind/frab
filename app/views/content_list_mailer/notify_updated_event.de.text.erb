@@ -1,0 +1,23 @@
+Hallo Einhaltsgruppe,
+
+Geändertes Event:
+
+-------------------------------------8<------------------------------
+     Title: <%= @event.title %>
+  Subtitle: <%= @event.subtitle %>
+Event type: <%= @event.event_type %>
+<% if @conference %>
+    Link: <%= event_url('de', @event.conference.acronym, @event.id) %>
+<% end %>
+Änderungen:
+-----------
+<% @event.changes.each do |field, change| %>
+<%= "#{field} ist geändert von #{change[0]} nach #{change[1]}" %>
+<% end %>
+Abstract:
+---------
+<%= @event.abstract %>
+-------------------------------------8<------------------------------
+
+Liebe Gruße,
+FRAB

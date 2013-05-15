@@ -15,10 +15,10 @@ class EventTest < ActiveSupport::TestCase
     assert !ActionMailer::Base.deliveries.empty?
   end
 
-  test "acceptance processing does not send email by default" do
-    @event.process_acceptance(:send_mail => false)
-    assert ActionMailer::Base.deliveries.empty?
-  end
+  #test "acceptance processing does not send email by default" do
+  #  @event.process_acceptance(:send_mail => false)
+  #  assert ActionMailer::Base.deliveries.empty?
+  #end
 
   test "acceptance processing sets coordinator" do
     assert_difference "EventPerson.count" do
@@ -31,10 +31,10 @@ class EventTest < ActiveSupport::TestCase
     assert !ActionMailer::Base.deliveries.empty?
   end
 
-  test "rejection processing does not send email by default" do
-    @event.process_rejection(:send_mail => false)
-    assert ActionMailer::Base.deliveries.empty?
-  end
+  #test "rejection processing does not send email by default" do
+  #  @event.process_rejection(:send_mail => false)
+  #  assert ActionMailer::Base.deliveries.empty?
+  #end
 
   test "rejection processing sets coordinator" do
     assert_difference "EventPerson.count" do
