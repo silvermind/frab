@@ -7,29 +7,43 @@ en:
         We are very happy to tell you that we accepted your submission
         
         %{title}
+        
       confirmation: |
-        Please (re-)confirm that you will be present and deliver your
+        Please quickly reconfirm that you will be present and deliver your
         talk, using the following link:
         
         %{link}
       check_data: |
         While you are at it: After confirming using that link, you will
-        be logged in to the conference planning system. Please take the time
-        to:
-        - make the abstract of your submission concise and to the point (if it
-          is not already so);
-          your abstract will be used in the official published program and should
-          be short and informative to give your intended audience a quick overview
-          of the contents of the talk; one to two short paragraphs max;
-        - check your data there; the data will be used in the official 
-          conference program;
-        - specify your availability at different times (if needed); we will
-          try to consider this when planning the final schedule;
+        be logged in to the conference planning system. Please take the time to
+        check your data there. The data will be used in the official 
+        conference program. You can also specify your availability at
+        different times there. We will try to consider this when planning the
+        final schedule.
+      withdrawal: |
+        By confirming your submission, you accept that your contribution at
+        OHM2013 will be live-streamed on the internet as well as archived.
+        You also accept that your contribution will be made available under a
+        CC-BY-NC-SA licence.
+        You also warrant that you have secured all needed permissions and
+        (copyright) licenses for your contribution and that you indemnify
+        Stichting IFCAT Foundation (the legal entity organising OHM2013) in
+        this regard.
         
-        Also by confirming your lecture/speech/performance/workshop/submission, you accept that it will be live-streamed on the internet as well as archived. You also accept that your contribution will be made available under a CC-BY-SA licence. You also warrant that you have secured all needed permissions and (copyright) licenses for your contribution and that you indemnify IFCAT foundation in this regard.
-      goodbye: 
+        If you would prefer your submission not to be live-streamed and/or
+        archived and/or you wish your submission to be made available under
+        a more permissive Creative Commons licence such as CC0, please get in
+        touch with Team:Content through &lt;a href="mailto:content@ohm2013.org"&gt;content@ohm2013.org&lt;/a&gt;.
+        
+        If you cannot accept these conditions, or you otherwise wish to
+        withdraw your submission, you can do so using the following link:
+        
+        %{link}
+        
+      goodbye:
         Kind regards
-
+        
+        
         The %{title} team
     event_rejection:
       subject: "Your submission to %{title}"
