@@ -1,0 +1,6 @@
+%section
+  .row
+    .span16
+      = render 'table', :events => @events
+      = actions_bar do
+        = will_paginate @events
