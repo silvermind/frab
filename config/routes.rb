@@ -88,6 +88,7 @@ Frab::Application.routes.draw do
           get :feedbacks
           get :start_review
           get :cards
+          get :report
         end
         member do
           get :people

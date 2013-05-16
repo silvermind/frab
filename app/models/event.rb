@@ -85,6 +85,10 @@ class Event < ActiveRecord::Base
     least_reviewed
   end
 
+  def self.filter(role)
+    self.select("events.*").joins(:event_people).group("event_people.id").having("sum(case when event_people.event_role = ?' then 1 else 0 end) = 0", role)
+  end
+
   def track_name
     self.track.try(:name)
   end
