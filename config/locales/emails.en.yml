@@ -1,16 +1,16 @@
 en:
   emails:
     event_acceptance:
-      subject: "Your submission to %{conference_title}"
-      greeting: "Dear %{speaker_name},"
+      subject: "Your submission to %{title}"
+      greeting: "Dear %{name},"
       accepted_event: |
         We are very happy to tell you that we accepted your submission 
-        '%{event_title}'.
+        '%{title}'.
         
       confirmation: |
         Please (re-)confirm that you will be present and deliver your talk, using the following link:
         
-        %{confirmation_link}
+        %{link}
       check_data: |
         While you are at it: after confirming using that link, you will be logged 
         in to the conference planning system. Please take the time to:
@@ -36,7 +36,7 @@ en:
         If you would prefer your submission not to be live-streamed and/or 
         archived and/or you wish your submission to be made available under a 
         more permissive Creative Commons licence such as CC0, please get in 
-        touch with Team:Content through <a href="mailto:content@ohm2013.org">content@ohm2013.org</a>.
+        touch with Team:Content through content@ohm2013.org.
      
         Finally, we would feel very honoured if you would write about your 
         accepted talk for OHM2013 on the internet, for instance on Twitter, 
@@ -56,7 +56,7 @@ en:
       goodbye: |
         Kind regards,
 
-        The %{conference_title} content team
+        The content team
 
         Links:
         (1) OHM2013 website: 
@@ -67,11 +67,11 @@ en:
             https://www.facebook.com/events/239109432801408/
 
     event_withdrawal:
-      subject: "Your withdrawn submission to %{conference_title}"
-      greeting: "Dear %{speaker_name},"
+      subject: "Your withdrawn submission to %{title}"
+      greeting: "Dear %{name},"
       accepted_event: |
         We are very sorry to see that you want to withdraw your talk named
-        '%{event_title}'.
+        '%{title}'.
         
                 
         We would like to know why the talk cannot be held. Please write to 
@@ -82,9 +82,9 @@ en:
       goodbye:
         Kind regards,
 
-        The %{conference_title} content team
+        The content team
     event_rejection:
-      subject: "Your submission to %{conference_title}"
+      subject: "Your submission to %{title}"
       greeting: "Dear %{name},"
       rejection: |
         We would like to thank you very much for your submission. We were 
@@ -92,16 +92,16 @@ en:
         submissions that we received.
 
         After an extensive selection process we unfortunately had to reject 
-        your submission named '%{event_title}'.
+        your submission named '%{title}'.
         
         We can assure you that this was not an easy decision to make.
         
         
       goodbye: |
       
-       We hope we can still welcome you at %{conference_title}.
+       We hope we can still welcome you at OHM2013
  
         Kind regards,
 
-        The %{conference_title} content team
+        The content team
 
