@@ -49,12 +49,12 @@ class EventsControllerTest < ActionController::TestCase
     assert_redirected_to events_path
   end
 
-  test "#filter should be successfull" do
+  test "#report should be successfull" do
     get :report, :conference_acronym => @conference.acronym, :filter => {:not_in_role => "speaker"}
     assert_response :success
   end
 
-  test "#filter should get events without certain event_users" do
+  test "#report should get events without certain event_users" do
     event_person = FactoryGirl.create(:event_person, :event => @event, :event_role => "speaker")
     orphan       = FactoryGirl.create(:event, :event_people => [], :conference => @conference)
 
