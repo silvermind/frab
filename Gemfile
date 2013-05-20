@@ -41,6 +41,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'mailcatcher'
   gem 'hpricot'
   gem 'yaml_db'
   gem 'better_errors'
