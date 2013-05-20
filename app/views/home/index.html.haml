@@ -82,6 +82,19 @@
               %td= @conference.events.where(:state => :canceled).count
               %td= @conference.events.where(:state => :rejected).count
               %td= @conference.events.count
+
+        %h4 Events by type
+        %table.zebra-stripe
+          %thead
+            %tr
+              - Event::TYPES.each do |type|
+                %th= type.to_s.humanize
+          %tbody
+            %thead
+              %tr
+                - Event::TYPES.each do |type|
+                  %td=@conference.events.where(:event_type => type).count
+
       - if @conference.languages.count > 1
         %h4 Events by language
         %p
