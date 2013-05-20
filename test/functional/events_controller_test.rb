@@ -49,7 +49,12 @@ class EventsControllerTest < ActionController::TestCase
     assert_redirected_to events_path
   end
 
-  test "#report should be successfull" do
+  test "#report without filters should be successfull" do
+    get :report, :conference_acronym => @conference.acronym
+    assert_response :success
+  end
+
+  test "#report should accept :not_in_role filter" do
     get :report, :conference_acronym => @conference.acronym, :filter => {:not_in_role => "speaker"}
     assert_response :success
   end
