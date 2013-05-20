@@ -4,63 +4,104 @@ en:
       subject: "Your submission to %{title}"
       greeting: "Dear %{name},"
       accepted_event: |
-        We are very happy to tell you that we accepted your submission
-        
-        %{title}
+        We are very happy to tell you that we accepted your submission 
+        '%{title}'.
         
       confirmation: |
-        Please quickly reconfirm that you will be present and deliver your
-        talk, using the following link:
+        Please (re-)confirm that you will be present and deliver your talk, using the following link:
         
         %{link}
       check_data: |
-        While you are at it: After confirming using that link, you will
-        be logged in to the conference planning system. Please take the time to
-        check your data there. The data will be used in the official 
-        conference program. You can also specify your availability at
-        different times there. We will try to consider this when planning the
-        final schedule.
-      withdrawal: |
-        By confirming your submission, you accept that your contribution at
-        OHM2013 will be live-streamed on the internet as well as archived.
-        You also accept that your contribution will be made available under a
+        While you are at it: after confirming using that link, you will be logged 
+        in to the conference planning system. Please take the time to:
+        - make the abstract of your submission concise and to the point (if it is 
+          not already so);
+          Your abstract will be used in the official published program and should 
+          be short and informative to give your intended audience a quick 
+          overview of the contents of the talk; one or two short paragraphs at 
+          the most;
+        - check your personal data; it will be used in the official program;
+        - specify your availability at different times (if needed); we will try
+          to consider this when planning the final schedule;
+        
+        By confirming your submission, you accept that your contribution at 
+        OHM2013 will be live-streamed on the internet as well as archived. 
+        You also accept that your contribution will be made available under a 
         CC-BY-NC-SA licence.
-        You also warrant that you have secured all needed permissions and
-        (copyright) licenses for your contribution and that you indemnify
-        Stichting IFCAT Foundation (the legal entity organising OHM2013) in
+        You also warrant that you have secured all needed permissions and 
+        (copyright) licenses for your contribution and that you indemnify 
+        Stichting IFCAT Foundation (the legal entity organising OHM2013) in 
         this regard.
         
-        If you would prefer your submission not to be live-streamed and/or
-        archived and/or you wish your submission to be made available under
-        a more permissive Creative Commons licence such as CC0, please get in
-        touch with Team:Content through &lt;a href="mailto:content@ohm2013.org"&gt;content@ohm2013.org&lt;/a&gt;.
+        If you would prefer your submission not to be live-streamed and/or 
+        archived and/or you wish your submission to be made available under a 
+        more permissive Creative Commons licence such as CC0, please get in 
+        touch with Team:Content through content@ohm2013.org.
+     
+        Finally, we would feel very honoured if you would write about your 
+        accepted talk for OHM2013 on the internet, for instance on Twitter, 
+        Facebook, or by blogging about it. 
+        Please feel free to link to the OHM2013-website, Twitter feed, and 
+        Facebook page. You can find the links below.
+     
+        Invite interesting participants among your peers and let your network 
+        know what awesome event will be going on in The Netherlands this summer!
+     
+      withdrawal: |
+        If you cannot accept the conditions, or you otherwise need to withdraw 
+        your submission, you can do so using the following link:
         
-        If you cannot accept these conditions, or you otherwise wish to
-        withdraw your submission, you can do so using the following link:
+        %{withdrawal_link}
         
-        %{link}
+      goodbye: |
+        Kind regards,
+
+        The content team
+
+        Links:
+        (1) OHM2013 website: 
+            https://ohm2013.org/
+        (2) Official OHM2013 twitter feed: 
+            https://twitter.com/ohm2013
+        (3) Official OHM2013 Facebook event page: 
+            https://www.facebook.com/events/239109432801408/
+
+    event_withdrawal:
+      subject: "Your withdrawn submission to %{title}"
+      greeting: "Dear %{name},"
+      accepted_event: |
+        We are very sorry to see that you want to withdraw your talk named
+        '%{title}'.
+        
+                
+        We would like to know why the talk cannot be held. Please write to 
+        <a href="mailto:content@ohm2013.org">content@ohm2013.org</a> or reply to this e-mail, maybe we can find
+        a solution to solve any problems that are in the way.
+
         
       goodbye:
-        Kind regards
-        
-        
-        The %{title} team
+        Kind regards,
+
+        The content team
     event_rejection:
       subject: "Your submission to %{title}"
       greeting: "Dear %{name},"
       rejection: |
-        we would like to thank you very much for your submission. We were
-        surprised and overwhelmed by the sheer amount of the high quality
+        We would like to thank you very much for your submission. We were 
+        surprised and overwhelmed by the sheer amount of the high quality 
         submissions that we received.
 
-        After an extensive selection process we unfortunately had to reject your
-        submission
-
-        %{title}
+        After an extensive selection process we unfortunately had to reject 
+        your submission named '%{title}'.
         
         We can assure you that this was not an easy decision to make.
-        We hope we can still  welcome you at the conference.
+        
+        
       goodbye: |
-        Kind regards
+      
+       We hope we can still welcome you at OHM2013
+ 
+        Kind regards,
 
-        The %{title} team
+        The content team
+
