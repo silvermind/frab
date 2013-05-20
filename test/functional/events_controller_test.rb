@@ -50,15 +50,17 @@ class EventsControllerTest < ActionController::TestCase
   end
 
   test "#filter should be successfull" do
-    get :report, :conference_acronym => @conference.acronym
+    get :report, :conference_acronym => @conference.acronym, :filter => {:not_in_role => "speaker"}
     assert_response :success
   end
 
   test "#filter should get events without certain event_users" do
-    event_person = FactoryGirl.create(:event_person)
-    @event = event_person.event
-    @orphan = FactoryGirl.create(:event)
-    get :report, :conference_acronym => @conference.acronym, :filter => { :not_in_role => event_person.event_role }
-    assert assigns(:events) == [@event]
+    event_person = FactoryGirl.create(:event_person, :event => @event, :event_role => "speaker")
+    orphan       = FactoryGirl.create(:event, :event_people => [], :conference => @conference)
+
+    get :report, :conference_acronym => @conference.acronym, :filter => { :not_in_role => "speaker" }
+
+    assert_equal 1, assigns(:events).length
+    assert_equal [orphan], assigns(:events)
   end
 end

@@ -85,8 +85,12 @@ class Event < ActiveRecord::Base
     least_reviewed
   end
 
-  def self.filter(role)
-    self.select("events.*").joins(:event_people).group("event_people.id").having("sum(case when event_people.event_role = ?' then 1 else 0 end) = 0", role)
+  def self.without_role(role)
+    self.roled_query.having("SUM(CASE WHEN event_people.event_role = ? THEN 1 ELSE 0 END) = 0", role)
+  end
+
+  def self.no_role
+    self.roled_query.having("COUNT(event_people.id) = 0")
   end
 
   def track_name
@@ -230,6 +234,11 @@ class Event < ActiveRecord::Base
 
   def send_updated_event_notification
 	  ContentListMailer.notify_updated_event(self).deliver
+  end
+
+  private
+  def self.roled_query
+    self.select("events.*").joins("LEFT OUTER JOIN event_people ON event_people.event_id = events.id").group("events.id")
   end
 
 end

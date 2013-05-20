@@ -50,4 +50,21 @@ class EventTest < ActiveSupport::TestCase
     assert !@event.overlap?(other_event)
   end
 
+  test "#without_role should filter events without the given role" do
+    @without_speaker  = FactoryGirl.create(:event)
+    FactoryGirl.create(:event_person, :event => @without_speaker, :person => @coordinator, :event_role => "coordinator")
+    assert_equal [@event],            Event.without_role("coordinator")
+    assert_equal [@without_speaker],  Event.without_role("speaker")
+  end
+
+  test "#without_role should include events without any role" do
+    @without_any_role = FactoryGirl.create(:event)
+    assert_equal [@without_any_role], Event.without_role("speaker")
+  end
+
+  test "should filter events with no role" do
+    event_with_no_role = FactoryGirl.create(:event)
+    assert_equal [], event_with_no_role.event_people
+    assert_equal [event_with_no_role], Event.no_role
+  end
 end

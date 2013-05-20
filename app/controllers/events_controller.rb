@@ -72,7 +72,7 @@ class EventsController < ApplicationController
   end
 
   def report
-    @events = @conference.events.filter(params[:filter][:not_in_role]).paginate(:page => params[:page])
+    @events = @conference.events.without_role(params[:filter][:not_in_role]).paginate(:page => params[:page])
   end
 
   # GET /events/1
