@@ -59,6 +59,11 @@ class EventsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "#report should prepare a list of possible roles to filter on" do
+    get :report, :conference_acronym => @conference.acronym
+    assert_not_nil assigns(:roles)
+  end
+
   test "#report should get events without certain event_users" do
     event_person = FactoryGirl.create(:event_person, :event => @event, :event_role => "speaker")
     orphan       = FactoryGirl.create(:event, :event_people => [], :conference => @conference)

@@ -77,6 +77,7 @@ class EventsController < ApplicationController
       events = @conference.events.without_role(params[:filter][:not_in_role])
     end
     @events = events.paginate(:page => params[:page])
+    @roles  = EventPerson::ROLES
   end
 
   # GET /events/1
