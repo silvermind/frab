@@ -25,6 +25,11 @@ module ApplicationHelper
       options["data-placement"] = "below"
       options[:hint] = nil
     end
+
+    if button_type == "danger"
+      options[:confirm] = "Are you sure?" unless options[:confirm]
+    end
+
     link_to link_name, path, options
   end
 
@@ -33,7 +38,7 @@ module ApplicationHelper
   end
 
   def remove_association_link(text, form_builder)
-    link_to_remove_association(text, form_builder, :class => "assoc btn danger") + tag(:hr)
+    link_to_remove_association(text, form_builder, :class => "assoc btn danger", :confirm => "Are you sure?") + tag(:hr)
   end
 
   def dynamic_association(association_name, title, form_builder, options = {})
