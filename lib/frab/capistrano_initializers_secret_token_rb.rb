@@ -97,7 +97,7 @@ Capistrano::Configuration.instance.load do
 
   namespace :deploy do
 
-    namespace :db do
+    namespace :secret do
 
       desc <<-DESC
         Creates the initializers/secret_token.rb configuration file in shared path.
