@@ -57,7 +57,8 @@ Frab::Application.configure do
   config.action_mailer.default_url_options = {
 	  :from => 'frab_notifier <frab_notifier@ohm2013.com>',
 	  :return_address => 'no-reply@ohm2013.com',
-	  :host => 'localhost:3000' }
+	  :host => 'localhost',
+    :port => 3000 }
 
 
   # Enable threaded mode
