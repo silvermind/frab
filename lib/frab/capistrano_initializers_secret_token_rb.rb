@@ -120,7 +120,7 @@ Capistrano::Configuration.instance.load do
         # Server secret
         #
         <% require 'securerandom' %>
-        Frab::Application.config.secret_token = '<%= SecureRandom.hex(64) %>'
+        Frab::Application.config.secret_token = '<%= SecureRandom.hex(64) %c>'
         EOF
 
         location = fetch(:template_dir, "config/deploy") + '/secret_token.rb.erb'
@@ -143,7 +143,7 @@ Capistrano::Configuration.instance.load do
     end
 
     after "deploy:setup",           "deploy:db:setup"   unless fetch(:skip_db_setup, false)
-    after "deploy:finalize_update", "deploy:db:symlink"
+    after "deploy:finalize_update", "deploy:secret:symlink"
 
   end
 
