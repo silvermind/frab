@@ -129,6 +129,6 @@ require "sidekiq/capistrano"
 
 require "./lib/frab/capistrano_redis_yml"
 require "./lib/frab/capistrano_database_yml"
-require "../lib/frab/capistrano_initializers_secret_token_rb"
+require "./lib/frab/capistrano_initializers_secret_token_rb"
 
 load 'deploy/assets'
