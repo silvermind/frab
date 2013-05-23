@@ -93,8 +93,8 @@ namespace :deploy do
 		if "#{skip_tests}" == "true"
 			puts "\n"
 			puts "-"*70
-			puts "Deploying for branch: '#{branch}' in environment: '#{rails_env}'".yellow
-			puts ">>> SKIPPING TESTS <<<<".yellow
+			puts "Deploying for branch: '#{branch}' in environment: '#{rails_env}'"
+			puts ">>> SKIPPING TESTS <<<<"
 			puts "-"*70
 		else
 			puts "--> Running tests, please wait ..."
