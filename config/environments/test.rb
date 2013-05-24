@@ -50,4 +50,7 @@ Frab::Application.configure do
   config.after_initialize do
     PaperTrail.enabled = false
   end
+
+  # config/initializers/secret_token.rb is not in repo. For test and dev, introduce it here
+  config.secret_token = "johvaeNgahr0deng2ta9eSh2elu7thohNahfahch"
 end

@@ -35,5 +35,8 @@ Frab::Application.configure do
   config.assets.debug = true
 
   Paperclip.options[:command_path] = "/usr/local/bin"
+
+  # config/initializers/secret_token.rb is not in repo. For test and dev, introduce it here
+  config.secret_token = "aic0ohxae2AishohmaephookahP3phoh8Oghaed8"
 end
 
