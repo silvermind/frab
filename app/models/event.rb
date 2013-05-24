@@ -202,6 +202,14 @@ class Event < ActiveRecord::Base
     "#{self.conference.program_export_base_url}events/#{self.id}.html"
   end
 
+  def self.with_speaker
+    self.includes(:event_people).where('event_people.event_role' => 'speaker')
+  end
+
+  def self.without_speaker
+    self.includes(:event_people).where('event_people.event_role <> ?',  'speaker')
+  end
+
   private
 
   def average(rating_type)
