@@ -47,6 +47,35 @@
             }
           }<% if @conference.last_day != day %>,<% end %>
         <% end %>
+
+      ],
+      "unscheduled": [
+        <% @conference.events.public.accepted.unscheduled.order(:created_at).each do |event| %>
+          {
+          "id": "<%= event.id %>",
+          "start": "",
+          "duration": "",
+          "room": "",
+          "slug": "",
+          "title": "<%= event.title %>",
+          "subtitle": "<%= event.subtitle %>",
+          "track": "",
+          "type": "<%= event.event_type %>",
+          "language": "<%= event.language %>",
+          "abstract": "<%= event.abstract %>",
+          "description": "<%= event.description %>",
+          "persons": [
+          <% event.speakers.each do |speaker| %>
+            {"id": "<%= speaker.id %>",  "full_public_name": "<%= speaker.full_public_name %>"}<% if event.speakers.last.id != speaker.id %>,<% end %>
+          <% end %>
+          ],
+          "links": [
+          <% event.links.each do |link| %>
+            {"url": "<%= link.url %>", "title": "<%= link.title%>"}
+          <% end %>
+          ]
+          }<% if @conference.events.public.accepted.unscheduled.order(:created_at).last.id != event.id %>,<% end %>
+        <% end %>
       ]
     }
   }
