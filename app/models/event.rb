@@ -109,6 +109,10 @@ class Event < ActiveRecord::Base
     self.event_people.where(:event_role => ["speaker", "moderator"]).all.map(&:person)
   end
 
+  def coordinator
+    self.event_people.where(:event_role => "coordinator").first.person
+  end
+
   def to_s
     "Event: #{self.title}"
   end
@@ -152,6 +156,10 @@ class Event < ActiveRecord::Base
 
   def accepted?
     self.state == "unconfirmed" or self.state == "confirmed"
+  end
+
+  def has_notes?
+    self.event_ratings.with_comments.count > 0
   end
 
   def update_conflicts

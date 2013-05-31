@@ -7,6 +7,8 @@ class EventRating < ActiveRecord::Base
   after_update :send_updated_event_rating_notification
   after_save :update_average
 
+  scope :with_comments, where("comment <> ''")
+
   protected
 
   def update_average

@@ -42,6 +42,11 @@ prawn_document(:page_layout => :landscape) do |pdf|
             :width => 300,
             :cell_style => {:align => :center}
           )
+          pdf.table(
+            [[event.try(:state), "#{event.average_rating} #{event.event_ratings_count}", (event.has_notes? ? "Note!" : ""), event.coordinator.public_name]],
+            :width => 300,
+            :cell_style => {:align => :center}
+          )
         end
       end
 
