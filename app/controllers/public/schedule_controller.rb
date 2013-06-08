@@ -61,7 +61,6 @@ class Public::ScheduleController < ApplicationController
         :abstract => s.abstract,
         :description => s.description,
         :avatar_file_name => s.avatar_file_name,
-        :gender => s.gender,
         :id => s.id
       }
     end
