@@ -54,6 +54,22 @@ class Public::ScheduleController < ApplicationController
 
   def speakers
     @speakers = Person.publicly_speaking_at(@conference).confirmed(@conference).order(:public_name, :first_name, :last_name)
+    #scrub information, otherwise we get too much details in the JSON
+    @public_speakers = @speakers.map do |s|
+      {
+        :public_name => s.public_name,
+        :abstract => s.abstract,
+        :description => s.description,
+        :avatar_file_name => s.avatar_file_name,
+        :gender => s.gender,
+        :id => s.id
+      }
+    end
+
+    respond_to do |format|
+      format.html
+      format.json { render :json => @public_speakers }
+    end
   end
 
   def speaker
