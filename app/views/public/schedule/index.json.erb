@@ -16,7 +16,7 @@
             "rooms": {
               <% @conference.rooms.public.each do |room| %>
               "<%= room.name %>": [
-                <% room.events.public.accepted.scheduled_on(day).order(:start_time).each do |event| %>
+                <% room.events.public.confirmed.accepted.scheduled_on(day).order(:start_time).each do |event| %>
                   {
                     "id": "<%= event.id %>",
                     "start": "<%= event.start_time.strftime('%H:%M') %>",
