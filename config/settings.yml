@@ -8,7 +8,7 @@ development:
   content_mail: postmaster@localhost
   smtp_settings:
     address: localhost
-    port: 2525
+    port: 1025
 
 test:
   host: frab.test
