@@ -50,7 +50,7 @@ class ReportsController < ApplicationController
 
     conference_people = Person
     if params[:term]
-        conference_people = Person.with_query(params[:term])
+      conference_people = Person.with_query(params[:term])
     end
 
     case @report_type
@@ -58,11 +58,13 @@ class ReportsController < ApplicationController
       r = conference_people.speaking_at(@conference)
     when 'people_with_a_note'
       r = conference_people.involved_in(@conference).where(Person.arel_table[:note].not_eq(""))
+    when 'people_without_events'
+      r = conference_people.without_events_in(@conference)
     end
 
     unless r.nil? or r.empty?
       @search = r.search(params[:q])
-      @search_count = r.count
+      @search_count = @search.result.length
       @people = @search.result.paginate :page => params[:page]
     end
     render :show
