@@ -34,7 +34,7 @@ add_event_to_slot = (event, td, update = true) ->
 make_draggable = (element) ->
   element.draggable(revert: "invalid", opacity: 0.4, cursorAt: {left: 5, top: 5})
 
-$ ->
+$(document).ready ->
   $("body").delegate("div.event", "mouseenter", ->
     event_div = $(this)
     return if event_div.find("a.close").length > 0
