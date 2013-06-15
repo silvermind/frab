@@ -58,6 +58,8 @@ class ReportsController < ApplicationController
       r = conference_people.speaking_at(@conference)
     when 'people_with_a_note'
       r = conference_people.involved_in(@conference).where(Person.arel_table[:note].not_eq(""))
+    when 'people_without_events'
+      r = conference_people.without_events_in(@conference)
     end
 
     unless r.nil? or r.empty?

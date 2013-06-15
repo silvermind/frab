@@ -31,7 +31,7 @@ class ReportsControllerTest < ActionController::TestCase
   end
 
   test "#show_people should allow all filters used in the menu" do
-    %w{people_speaking_at people_with_a_note}.each do |filter|
+    %w{people_speaking_at people_with_a_note people_without_events}.each do |filter|
       get :show_people, :id => filter, :conference_acronym => @conference.acronym
       assert_response :success
     end
@@ -57,6 +57,15 @@ class ReportsControllerTest < ActionController::TestCase
     assert_equal [@hit], assigns(:events)
     assert_not_equal assigns(:events), [@no_lecture]
     assert_not_equal assigns(:events), [@no_speaker]
+  end
+
+  test "#people_without_events" do
+    with_event    = FactoryGirl.create(:event_person)
+    without_event = FactoryGirl.create(:person)
+    get :show_people, :id => "people_without_events", :conference_acronym => @conference.acronym
+
+    assert_false assigns(:people).include?(with_event)
+    assert_true  assigns(:people).include?(without_event)
   end
 
   # TODO: these need tests

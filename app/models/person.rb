@@ -36,6 +36,9 @@ class Person < ActiveRecord::Base
   scope :involved_in, lambda { |conference|
     joins(:events => :conference).where(:"conferences.id" => conference.id).group(:"people.id")
   }
+  scope :without_events_in, lambda {|conference|
+    joins("LEFT JOIN event_people ON event_people.person_id = people.id").group(:"people.id").having("SUM(CASE WHEN event_people.id > 0 then 1 ELSE 0 END) = 0")
+  }
   scope :speaking_at, lambda { |conference|
     joins(:events => :conference).where(:"conferences.id" => conference.id).where(:"event_people.event_role" => ["speaker", "moderator"]).where(:"events.state" => ["unconfirmed", "confirmed"]).group(:"people.id")
   }
