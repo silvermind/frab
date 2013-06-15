@@ -50,7 +50,7 @@ class ReportsController < ApplicationController
 
     conference_people = Person
     if params[:term]
-        conference_people = Person.with_query(params[:term])
+      conference_people = Person.with_query(params[:term])
     end
 
     case @report_type
