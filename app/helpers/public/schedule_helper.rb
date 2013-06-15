@@ -21,6 +21,6 @@ module Public::ScheduleHelper
   end
 
   def day_at_i(day, time)
-    day.to_time.change(:hour => time/60, :min => time%60)
+    day.to_time.in_time_zone.change(:hour => time/60, :min => time%60)
   end
 end
