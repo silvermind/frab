@@ -8,9 +8,11 @@ en:
         '%{title}'.
         
       confirmation: |
-        Please (re-)confirm that you will be present and deliver your talk, using the following link:
-        
+        Please (re-)confirm that you will be present and deliver your talk, using
+        the confirmation link further down this message.
+
         %{link}
+     
       check_data: |
         While you are at it: after confirming using that link, you will be logged 
         in to the conference planning system. Please take the time to:
@@ -37,7 +39,9 @@ en:
         archived and/or you wish your submission to be made available under a 
         more permissive Creative Commons licence such as CC0, please get in 
         touch with Team:Content through content@ohm2013.org.
-     
+
+        Use the following link to confirm your submission:
+
         Finally, we would feel very honoured if you would write about your 
         accepted talk for OHM2013 on the internet, for instance on Twitter, 
         Facebook, or by blogging about it. 
@@ -59,11 +63,11 @@ en:
         The content team
 
         Links:
-        (1) OHM2013 website: 
+        (1) OHM2013 website:
             https://ohm2013.org/
-        (2) Official OHM2013 twitter feed: 
+        (2) Official OHM2013 twitter feed:
             https://twitter.com/ohm2013
-        (3) Official OHM2013 Facebook event page: 
+        (3) Official OHM2013 Facebook event page:
             https://www.facebook.com/events/239109432801408/
 
     event_withdrawal:

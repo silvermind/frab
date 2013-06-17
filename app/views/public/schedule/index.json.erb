@@ -50,7 +50,7 @@
 
       ],
       "unscheduled": [
-        <% @conference.events.public.accepted.unscheduled.order(:created_at).each do |event| %>
+        <% @conference.events.public.confirmed.accepted.unscheduled.order(:created_at).each do |event| %>
           {
           "id": "<%= event.id %>",
           "start": "",

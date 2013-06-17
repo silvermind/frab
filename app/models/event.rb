@@ -110,7 +110,7 @@ class Event < ActiveRecord::Base
   end
 
   def coordinator
-    self.event_people.where(:event_role => "coordinator").first.person
+    self.event_people.where(:event_role => "coordinator").first.try(:person)
   end
 
   def to_s
