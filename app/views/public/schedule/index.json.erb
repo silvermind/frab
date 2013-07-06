@@ -28,6 +28,7 @@
                     "track": "<%= event.track.try(:name) %>",
                     "type": "<%= event.event_type %>",
                     "language": "<%= event.language %>",
+                    "licence": "<%= event.licence_as_s %>",
                     "abstract": "<%= event.abstract %>",
                     "description": "<%= event.description %>",
                     "persons": [
@@ -62,6 +63,7 @@
           "track": "",
           "type": "<%= event.event_type %>",
           "language": "<%= event.language %>",
+          "licence": "<%= event.licence_as_s %>",
           "abstract": "<%= event.abstract %>",
           "description": "<%= event.description %>",
           "persons": [
