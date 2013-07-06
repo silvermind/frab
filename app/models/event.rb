@@ -220,7 +220,7 @@ class Event < ActiveRecord::Base
   end
 
   def licence_as_s
-    LICENCES.key(self.licence.to_sym)
+    LICENCES.key(self.licence.to_sym) if self.licence
   end
 
   private

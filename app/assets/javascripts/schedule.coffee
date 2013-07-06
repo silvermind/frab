@@ -58,10 +58,6 @@ $(document).ready ->
   $("body").delegate("div.event", "mouseleave", ->
     $(this).find("a.close").remove()
   )
-  $("body").delegate("div.event", "click", (click_event) ->
-    click_event.stopPropagation()
-    click_event.preventDefault()
-  )
   for button in $("a.toggle-room")
     $(button).click ->
       current_button = $(this)
