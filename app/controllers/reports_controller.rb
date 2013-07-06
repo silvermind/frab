@@ -30,7 +30,7 @@ class ReportsController < ApplicationController
     when 'events_without_speaker'
       r = conference_events.without_speaker
     when 'unconfirmed_events'
-      r = conference_events.where(:event_type => :lecture, :state => :unconfirmed)
+      r = conference_events.where(:state => :unconfirmed)
     when 'events_with_unusual_state_speakers'
       r = conference_events.joins(:event_people).where(:event_people => { :role_state => [:canceled, :declined, :idea, :offer, :unclear], :event_role => :speaker } )
     end
