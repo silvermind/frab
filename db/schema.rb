@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121125004558) do
+ActiveRecord::Schema.define(:version => 20130706183804) do
 
   create_table "availabilities", :force => true do |t|
     t.integer  "person_id"
@@ -137,6 +137,7 @@ ActiveRecord::Schema.define(:version => 20121125004558) do
     t.text     "specific_conditions_to_meet"
     t.string   "submission_level"
     t.string   "target_audience"
+    t.string   "licence"
   end
 
   create_table "im_accounts", :force => true do |t|

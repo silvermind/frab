@@ -5,6 +5,7 @@ class Event < ActiveRecord::Base
   OFF_THE_RECORD_NAMES  = [:no, :yes, :anonymous]
   SUBMISSION_LEVELS = [:beginner, :intermediate, :advanced]
   TARGET_AUDIENCES = [:adults_17_plus, :youngsters_12_16, :children_7_11, :young_children_4_6]
+  LICENCES = {"CC BY-NC-SA" => :cc_by_nc_sa, "CC BY-SA" =>  :cc_by_sa, "CC0, Public domain" =>  :cc_0, "Off the Record" => :otr}
 
   attr_protected :track_id, :as => :submitter
 
@@ -216,6 +217,10 @@ class Event < ActiveRecord::Base
 
   def self.without_speaker
     self.includes(:event_people).where('event_people.event_role <> ?',  'speaker')
+  end
+
+  def licence_as_s
+    LICENCES.key(self.licence.to_sym)
   end
 
   private

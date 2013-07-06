@@ -29,6 +29,9 @@
         %b Language:
         = @event.language
       %p
+        %b Licence:
+        = @event.licence_as_s
+      %p
         %b Public:
         = check_box_tag :public, @event.public, @event.public != 0, :disabled => true
       %p
