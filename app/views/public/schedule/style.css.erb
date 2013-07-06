@@ -1,12 +1,12 @@
 <% case @conference.timeslot_duration
    when 5
-     base_size = 20
+     base_size = 10
    when 10
-     base_size = 30
+     base_size = 15
    when 15
-     base_size = 40
+     base_size = 25
    else
-     base_size = 80
+     base_size = 40
    end
 %>
 <% @conference.max_timeslots.times do |i| %>

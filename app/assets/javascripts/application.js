@@ -3,6 +3,7 @@
 //= require jquery-ui
 //= require cocoon
 //= require twitter/bootstrap
+//= require jquery.stickytableheaders.js
 
 $(function() {
   $('.topbar').dropdown();
