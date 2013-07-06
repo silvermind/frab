@@ -35,6 +35,7 @@ make_draggable = (element) ->
   element.draggable(revert: "invalid", opacity: 0.4, cursorAt: {left: 5, top: 5})
 
 $(document).ready ->
+  $("table").stickyTableHeaders({ fixedOffset: $('.topbar') });
   $("body").delegate("div.event", "mouseenter", ->
     event_div = $(this)
     return if event_div.find("a.close").length > 0
