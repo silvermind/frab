@@ -76,7 +76,7 @@ table.room tbody tr td {
 
 table.room tbody tr td .time {
   position:relative;
-  left: -16px;
+  left: -14px;
 }
 
 table.room tbody tr td.event-hover {
